@@ -5,3 +5,7 @@
 
 cpp/index
 ```
+
+python/index
+shell/index
+typescript/index
