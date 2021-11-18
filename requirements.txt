@@ -1,0 +1,4 @@
+sphinx>=4.3
+furo
+myst-nb
+sphinx-intl
