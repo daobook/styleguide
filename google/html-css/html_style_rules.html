@@ -1,0 +1,475 @@
+<!doctype html>
+<html class="no-js" lang="zh_CN">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="赠言" href="parting_words.html" /><link rel="prev" title="HTML格式规则" href="html_formatting_rules.html" />
+
+    <meta name="generator" content="sphinx-4.3.0, furo 2021.11.16"/>
+        <title>HTML样式规则 - Style Guide 0.0.1 文档</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=916d6ed8f59335acffa15474ff504849343d4c76" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=0af69da206d614734f649b27d4cdc2dd6c31f41d" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Style Guide 0.0.1 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Style Guide 0.0.1 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=搜索 name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">导航</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">谷歌风格指南</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../cpp/index.html">C++ 风格指南</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/headers.html">1. 头文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/scoping.html">2. 作用域</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/classes.html">3. 类</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/functions.html">4. 函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/magic.html">5. 来自 Google 的奇技</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/others.html">6. 其他 C++ 特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/naming.html">7. 命名约定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/comments.html">8. 注释</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/formatting.html">9. 格式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/exceptions.html">10. 规则特例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/end.html">11. 结束语</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/changelog.html">12. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../python/index.html">Python 风格指南 - 内容目录</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/background.html">1. 背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/python_language_rules.html">2. Python语言规范</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/python_style_rules.html">3. Python 风格规范</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/parting_words.html">4. 临别赠言</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/changelog.html">5. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">HTML &amp; CSS</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="background.html">背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="css_formatting_rules.html">CSS格式化规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="css_meta_rules.html">CSS元规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="css_style_rules.html">css样式规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general_formatting_rules.html">总体排版规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general_meta_rules.html">整体的元数据规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general_style_rules.html">整体样式规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="html_formatting_rules.html">HTML格式规则</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">HTML样式规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parting_words.html">赠言</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../shell/index.html">Shell 风格指南 - 内容目录</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../shell/background.html">1. 背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/shell_files_and_interpreter_invocation.html">2. Shell文件和解释器调用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/environment.html">3. 环境</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/comments.html">4. 注释</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/formatting.html">5. 格式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/features_and_bugs.html">6. 特性及错误</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/naming_conventions.html">7. 命名约定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/calling_commands.html">8. 调用命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/conclusion.html">9. 结论</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/changelog.html">10. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../typescript/index.html">TypeScript 风格指南</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/syntax.html">1. 语法规范</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/language.html">2. 语言特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/source_organization.html">3. 代码管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/type_system.html">4. 类型系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/consistency.html">5. 一致性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/changelog.html">6. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../javascript/index.html">Javascript 风格指南</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../javascript/background.html">1. 背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../javascript/javascript_language_rules.html">2. Javascript语言规范</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="html">
+<h1>HTML样式规则<a class="headerlink" href="#html" title="永久链接至标题">¶</a></h1>
+<section id="id1">
+<h2>文档类型<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>使用HTML5。</p>
+<p>HTML5（HTML语法）是所有HTML文档的首选： <code class="docutils literal notranslate"><span class="pre">&lt;!DOCTYPE</span> <span class="pre">html&gt;</span></code> 。</p>
+<p>（推荐使用HTML，即text/html。不要使用XHTML。XHTML，即 <a class="reference external" href="http://hixie.ch/advocacy/xhtml">application/xhtml+xml</a>，缺乏浏览器和基础结构的支持，并且优化的空间比HTML小。）
+虽然HTML闭合标签没有问题，但是不要自闭合空标签。即写 <code class="docutils literal notranslate"><span class="pre">&lt;br&gt;</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">&lt;br</span> <span class="pre">/&gt;</span></code> 。</p>
+</section>
+<section id="id2">
+<h2>HTML合法性<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>在可能的情况下使用合法的HTML。</p>
+<p>使用合法的HTML代码，除非由于文件大小导致的不可达到的性能目标而不能使用。</p>
+<p>利用已用工具对合法性进行测试，例如 <a class="reference external" href="http://validator.w3.org/nu/">W3C HTML validator</a>。</p>
+<p>使用合法的HTML是一个可度量的基准质量属性，该属性有助于了解技术需求和约束，从而确保合理的HTML使用。</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 不推荐 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Test<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>This is only a test.
+
+<span class="c">&lt;!-- 推荐 --&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Test<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>This is only a test.<span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>语义化<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>根据HTML的目的使用它。</p>
+<p>根据元素（有时被错误的叫做“标签”）被创造的用途使用他们。比如，对标题使用标题元素，对段落使用 <code class="docutils literal notranslate"><span class="pre">p</span></code> 元素，对锚点使用 <code class="docutils literal notranslate"><span class="pre">a</span></code> 元素等。</p>
+<p>语义化的使用HTML对于可访问性、复用性和代码的高效性等因素非常重要。</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 不推荐 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"goToRecommendations();"</span><span class="p">&gt;</span>All recommendations<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- 推荐 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"recommendations/"</span><span class="p">&gt;</span>All recommendations<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>多媒体降级<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>为多媒体提供替代内容。</p>
+<p>对于图片、视频、通过 <code class="docutils literal notranslate"><span class="pre">canvas</span></code> 实现的动画等多媒体来说，确保提供可访问的替代内容。对于图片，可提供有意义的替代文本（ <code class="docutils literal notranslate"><span class="pre">alt</span></code> ）；对于视频和音频，如有条件可提供对白和字幕。</p>
+<p>提供替代内容对辅助功能很重要：没有 <code class="docutils literal notranslate"><span class="pre">alt</span></code> ，一位盲人用户很难知道一张图片的内容，其他用户可能不能了解视频和音频的内容。
+（对于 <code class="docutils literal notranslate"><span class="pre">alt</span></code> 属性会引起冗余的图片和你不打算添加CSS的纯粹装饰性的图片，不用添加替代文本，写成 <code class="docutils literal notranslate"><span class="pre">alt=""</span></code> 即可。）</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 不推荐 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"spreadsheet.png"</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- 推荐 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"spreadsheet.png"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Spreadsheet screenshot."</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>关注点分离<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>将结构、表现、行为分离。</p>
+<p>严格保持结构（标识），表现（样式），行为（脚本）分离，尽量使三者之间的相互影响最小。</p>
+<p>就是说，确保文档和模板只包含HTML，并且HTML只用来表现结构。把任何表现性的东西都移到样式表，任何行为性的东西都移到脚本中。</p>
+<p>此外，尽可能少的从文档和模板中引用样式表和脚本来减少三者的相互影响。</p>
+<p>结构、表现、行为分离对维护非常重要。更改HTML文档和模板总是比更新样式表和脚本成本更高。</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 不推荐 --&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>HTML sucks<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"base.css"</span> <span class="na">media</span><span class="o">=</span><span class="s">"screen"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"grid.css"</span> <span class="na">media</span><span class="o">=</span><span class="s">"screen"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"print.css"</span> <span class="na">media</span><span class="o">=</span><span class="s">"print"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">style</span><span class="o">=</span><span class="s">"font-size: 1em;"</span><span class="p">&gt;</span>HTML sucks<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>I’ve read about this on a few sites but now I’m sure:
+  <span class="p">&lt;</span><span class="nt">u</span><span class="p">&gt;</span>HTML is stupid!!1<span class="p">&lt;/</span><span class="nt">u</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>I can’t believe there’s no way to control the styling of
+  my website without doing everything all over again!<span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- 推荐 --&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>My first CSS-only redesign<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"default.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>My first CSS-only redesign<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>I’ve read about this on a few sites but today I’m actually
+  doing it: separating concerns and avoiding anything in the HTML of
+  my website that is presentational.
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>It’s awesome!
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h2>实体引用<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>不要使用实体引用。</p>
+<p>假设文件、编辑器和团队之间使用相同的编码（UTF-8），则没有必要使用例如 <code class="docutils literal notranslate"><span class="pre">&amp;mdash;</span></code> 、 <code class="docutils literal notranslate"><span class="pre">&amp;rdquo;</span></code> 或 <code class="docutils literal notranslate"><span class="pre">&amp;#x263a;</span></code> 这样的实体引用。</p>
+<p>唯一的例外适用于HTML中具有特殊意义的字符（比如&lt;和&amp;），和控制或者隐藏的字符（比如不换行空格）。</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 不推荐 --&gt;</span>
+The currency symbol for the Euro is <span class="ni">&amp;ldquo;&amp;eur;&amp;rdquo;</span>.
+
+<span class="c">&lt;!-- 推荐 --&gt;</span>
+The currency symbol for the Euro is "€".
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h2>可选的标签<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>省略可选的标签（可选）。</p>
+<p>为了优化文件大小和可扫描，考虑省略可选标签。 <a class="reference external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/syntax.html#syntax-tag-omission">HTML5规范</a> 定义了哪些标签可以被省略。</p>
+<p>（这种方法可能要求一段宽限期去建立一个更加广泛的准则，因为它和Web开发人员通常所了解的有着显著不同。考虑到一致性和简单性，最好省略所有可选标签。）</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 不推荐 --&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Spending money, spending bytes<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Sic.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- 推荐 --&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Saving money, saving bytes<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Qed.
+</pre></div>
+</div>
+</section>
+<section id="type">
+<h2>type属性<a class="headerlink" href="#type" title="永久链接至标题">¶</a></h2>
+<p>为样式表和脚本省略 <code class="docutils literal notranslate"><span class="pre">type</span></code> 属性。</p>
+<p>引用样式表（除非不是使用CSS）和脚本（除非不是使用JavaScript）不要使用type属性。</p>
+<p>HTML5将 <a class="reference external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#attr-style-type">text/css</a> 和 <a class="reference external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#attr-script-type">text/javascript</a> 设置为默认值，在这种情况下指定type属性并不必要。甚至同样兼容老版本的浏览器。</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 不推荐 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"//www.google.com/css/maia.css"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- 推荐 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"//www.google.com/css/maia.css"</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- 不推荐 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"//www.google.com/js/gweb/analytics/autotrack.js"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/javascript"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- 推荐 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"//www.google.com/js/gweb/analytics/autotrack.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="parting_words.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">赠言</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="html_formatting_rules.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">HTML格式规则</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021, xinetzone |
+          Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            | <a class="muted-link" href="../../_sources/google/html-css/html_style_rules.rst.txt"
+               rel="nofollow">
+              显示源代码
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            目录
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">HTML样式规则</a><ul>
+<li><a class="reference internal" href="#id1">文档类型</a></li>
+<li><a class="reference internal" href="#id2">HTML合法性</a></li>
+<li><a class="reference internal" href="#id3">语义化</a></li>
+<li><a class="reference internal" href="#id4">多媒体降级</a></li>
+<li><a class="reference internal" href="#id5">关注点分离</a></li>
+<li><a class="reference internal" href="#id6">实体引用</a></li>
+<li><a class="reference internal" href="#id7">可选的标签</a></li>
+<li><a class="reference internal" href="#type">type属性</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    </body>
+</html>

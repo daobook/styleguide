@@ -1,0 +1,396 @@
+<!doctype html>
+<html class="no-js" lang="zh_CN">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="Python 风格指南 - 内容目录" href="../python/index.html" /><link rel="prev" title="11. 结束语" href="end.html" />
+
+    <meta name="generator" content="sphinx-4.3.0, furo 2021.11.16"/>
+        <title>12. 变更日志 - Style Guide 0.0.1 文档</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=916d6ed8f59335acffa15474ff504849343d4c76" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=0af69da206d614734f649b27d4cdc2dd6c31f41d" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Style Guide 0.0.1 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Style Guide 0.0.1 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=搜索 name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">导航</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">谷歌风格指南</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">C++ 风格指南</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="headers.html">1. 头文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scoping.html">2. 作用域</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classes.html">3. 类</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html">4. 函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="magic.html">5. 来自 Google 的奇技</a></li>
+<li class="toctree-l3"><a class="reference internal" href="others.html">6. 其他 C++ 特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="naming.html">7. 命名约定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="comments.html">8. 注释</a></li>
+<li class="toctree-l3"><a class="reference internal" href="formatting.html">9. 格式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exceptions.html">10. 规则特例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="end.html">11. 结束语</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">12. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../python/index.html">Python 风格指南 - 内容目录</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/background.html">1. 背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/python_language_rules.html">2. Python语言规范</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/python_style_rules.html">3. Python 风格规范</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/parting_words.html">4. 临别赠言</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/changelog.html">5. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../html-css/index.html">HTML &amp; CSS</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/background.html">背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/css_formatting_rules.html">CSS格式化规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/css_meta_rules.html">CSS元规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/css_style_rules.html">css样式规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/general_formatting_rules.html">总体排版规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/general_meta_rules.html">整体的元数据规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/general_style_rules.html">整体样式规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/html_formatting_rules.html">HTML格式规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/html_style_rules.html">HTML样式规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/parting_words.html">赠言</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../shell/index.html">Shell 风格指南 - 内容目录</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../shell/background.html">1. 背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/shell_files_and_interpreter_invocation.html">2. Shell文件和解释器调用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/environment.html">3. 环境</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/comments.html">4. 注释</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/formatting.html">5. 格式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/features_and_bugs.html">6. 特性及错误</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/naming_conventions.html">7. 命名约定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/calling_commands.html">8. 调用命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/conclusion.html">9. 结论</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/changelog.html">10. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../typescript/index.html">TypeScript 风格指南</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/syntax.html">1. 语法规范</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/language.html">2. 语言特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/source_organization.html">3. 代码管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/type_system.html">4. 类型系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/consistency.html">5. 一致性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/changelog.html">6. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../javascript/index.html">Javascript 风格指南</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../javascript/background.html">1. 背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../javascript/javascript_language_rules.html">2. Javascript语言规范</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="id1">
+<h1><span class="section-number">12. </span>变更日志<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<dl class="field-list">
+<dt class="field-odd">版本</dt>
+<dd class="field-odd"><p>4.45</p>
+</dd>
+<dt class="field-even">原作者</dt>
+<dd class="field-even"><div class="line-block">
+<div class="line">Benjy Weinberger</div>
+<div class="line">Craig Silverstein</div>
+<div class="line">Gregory Eitzmann</div>
+<div class="line">Mark Mentovai</div>
+<div class="line">Tashana Landray</div>
+</div>
+</dd>
+<dt class="field-odd">翻译</dt>
+<dd class="field-odd"><div class="line-block">
+<div class="line"><a class="reference external" href="http://www.yulefox.com">YuleFox</a></div>
+<div class="line"><a class="reference external" href="https://github.com/yangyubo">Yang.Y</a></div>
+<div class="line"><a class="reference external" href="http://acgtyrant.com">acgtyrant</a></div>
+<div class="line"><a class="reference external" href="http://github.com/lilinsanity">lilinsanity</a></div>
+</div>
+</dd>
+<dt class="field-even">项目主页</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="http://google-styleguide.googlecode.com">Google Style Guide</a></p></li>
+<li><p><a class="reference external" href="http://github.com/zh-google-styleguide/zh-google-styleguide">Google 开源项目风格指南 - 中文版</a></p></li>
+</ul>
+</dd>
+</dl>
+<section id="id2">
+<h2><span class="section-number">12.1. </span>译者前言<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>Google 经常会发布一些开源项目, 意味着会接受来自其他代码贡献者的代码. 但是如果代码贡献者的编程风格与 Google 的不一致, 会给代码阅读者和其他代码提交者造成不小的困扰. Google 因此发布了这份自己的编程风格指南, 使所有提交代码的人都能获知 Google 的编程风格.</p>
+<p>翻译初衷:</p>
+<blockquote>
+<div><p>规则的作用就是避免混乱. 但规则本身一定要权威, 有说服力, 并且是理性的. 我们所见过的大部分编程规范, 其内容或不够严谨, 或阐述过于简单, 或带有一定的武断性.</p>
+<p>Google 保持其一贯的严谨精神, 5 万汉字的指南涉及广泛, 论证严密. 我们翻译该系列指南的主因也正是其严谨性. 严谨意味着指南的价值不仅仅局限于它罗列出的规范, 更具参考意义的是它为了列出规范而做的谨慎权衡过程.</p>
+<p>指南不仅列出你要怎么做, 还告诉你为什么要这么做, 哪些情况下可以不这么做, 以及如何权衡其利弊. 其他团队未必要完全遵照指南亦步亦趋, 如前面所说, 这份指南是 Google 根据自身实际情况打造的, 适用于其主导的开源项目. 其他团队可以参照该指南, 或从中汲取灵感, 建立适合自身实际情况的规范.</p>
+<p>我们在翻译的过程中, 收获颇多. 希望本系列指南中文版对你同样能有所帮助.</p>
+</div></blockquote>
+<p>我们翻译时也是尽力保持严谨, 但水平所限, bug 在所难免. 有任何意见或建议, 可与我们取得联系.</p>
+<p>中文版和英文版一样, 使用 <code class="docutils literal notranslate"><span class="pre">Artistic</span> <span class="pre">License/GPL</span></code> 开源许可.</p>
+<p>中文版修订历史:</p>
+<blockquote>
+<div><ul>
+<li><p>2015-08 : 热心的清华大学同学 @lilinsanity 完善了「类」章节以及其它一些小章节。至此，对 Google CPP Style Guide 4.45 的翻译正式竣工。</p></li>
+<li><p>2015-07 4.45 : acgtyrant 为了学习 C++ 的规范，顺便重新翻译了本 C++ 风格指南，特别是 C++11 的全新内容。排版大幅度优化，翻译措辞更地道，添加了新译者笔记。Google 总部 C++ 工程师 innocentim, 清华大学不愿意透露姓名的唐马儒先生，大阪大学大学院情报科学研究科计算机科学专攻博士 farseerfc 和其它 Arch Linux 中文社区众帮了译者不少忙，谢谢他们。因为 C++ Primer 尚未完全入门，暂时没有翻译「类」章节和其它一些小章节。</p></li>
+<li><p>2009-06 3.133 : YuleFox 的 1.0 版已经相当完善, 但原版在近一年的时间里, 其规范也发生了一些变化.</p>
+<blockquote>
+<div><p>Yang.Y 与 YuleFox 一拍即合, 以项目的形式来延续中文版 : <a class="reference external" href="http://github.com/yangyubo/zh-google-styleguide">Google 开源项目风格指南 - 中文版项目</a>.</p>
+<p>主要变化是同步到 3.133 最新英文版本, 做部分勘误和改善可读性方面的修改, 并改进排版效果. Yang.Y 重新翻修, YuleFox 做后续评审.</p>
+</div></blockquote>
+</li>
+<li><p>2008-07 1.0 : 出自 <a class="reference external" href="http://www.yulefox.com/?p=207">YuleFox 的 Blog</a>, 很多地方摘录的也是该版本.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id4">
+<h2><span class="section-number">12.2. </span>背景<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>C++ 是 Google 大部分开源项目的主要编程语言. 正如每个 C++ 程序员都知道的, C++ 有很多强大的特性, 但这种强大不可避免的导致它走向复杂，使代码更容易产生 bug, 难以阅读和维护.</p>
+<p>本指南的目的是通过详细阐述 C++ 注意事项来驾驭其复杂性. 这些规则在保证代码易于管理的同时, 也能高效使用 C++ 的语言特性.</p>
+<p><em>风格</em>, 亦被称作可读性, 也就是指导 C++ 编程的约定. 使用术语 “风格” 有些用词不当, 因为这些习惯远不止源代码文件格式化这么简单.</p>
+<p>使代码易于管理的方法之一是加强代码一致性. 让任何程序员都可以快速读懂你的代码这点非常重要. 保持统一编程风格并遵守约定意味着可以很容易根据 “模式匹配” 规则来推断各种标识符的含义. 创建通用, 必需的习惯用语和模式可以使代码更容易理解. 在一些情况下可能有充分的理由改变某些编程风格, 但我们还是应该遵循一致性原则，尽量不这么做.</p>
+<p>本指南的另一个观点是 C++ 特性的臃肿. C++ 是一门包含大量高级特性的庞大语言. 某些情况下, 我们会限制甚至禁止使用某些特性. 这么做是为了保持代码清爽, 避免这些特性可能导致的各种问题. 指南中列举了这类特性, 并解释为什么这些特性被限制使用.</p>
+<p>Google 主导的开源项目均符合本指南的规定.</p>
+<p>注意: 本指南并非 C++ 教程, 我们假定读者已经对 C++ 非常熟悉.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../python/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Python 风格指南 - 内容目录</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="end.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title"><span class="section-number">11. </span>结束语</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021, xinetzone |
+          Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            | <a class="muted-link" href="../../_sources/google/cpp/changelog.rst.txt"
+               rel="nofollow">
+              显示源代码
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            目录
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">12. 变更日志</a><ul>
+<li><a class="reference internal" href="#id2">12.1. 译者前言</a></li>
+<li><a class="reference internal" href="#id4">12.2. 背景</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    </body>
+</html>

@@ -1,0 +1,360 @@
+<!doctype html>
+<html class="no-js" lang="zh_CN">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="11. 结束语" href="end.html" /><link rel="prev" title="9. 格式" href="formatting.html" />
+
+    <meta name="generator" content="sphinx-4.3.0, furo 2021.11.16"/>
+        <title>10. 规则特例 - Style Guide 0.0.1 文档</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=916d6ed8f59335acffa15474ff504849343d4c76" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=0af69da206d614734f649b27d4cdc2dd6c31f41d" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Style Guide 0.0.1 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Style Guide 0.0.1 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=搜索 name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">导航</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">谷歌风格指南</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">C++ 风格指南</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="headers.html">1. 头文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scoping.html">2. 作用域</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classes.html">3. 类</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html">4. 函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="magic.html">5. 来自 Google 的奇技</a></li>
+<li class="toctree-l3"><a class="reference internal" href="others.html">6. 其他 C++ 特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="naming.html">7. 命名约定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="comments.html">8. 注释</a></li>
+<li class="toctree-l3"><a class="reference internal" href="formatting.html">9. 格式</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">10. 规则特例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="end.html">11. 结束语</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html">12. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../python/index.html">Python 风格指南 - 内容目录</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/background.html">1. 背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/python_language_rules.html">2. Python语言规范</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/python_style_rules.html">3. Python 风格规范</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/parting_words.html">4. 临别赠言</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/changelog.html">5. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../html-css/index.html">HTML &amp; CSS</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/background.html">背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/css_formatting_rules.html">CSS格式化规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/css_meta_rules.html">CSS元规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/css_style_rules.html">css样式规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/general_formatting_rules.html">总体排版规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/general_meta_rules.html">整体的元数据规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/general_style_rules.html">整体样式规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/html_formatting_rules.html">HTML格式规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/html_style_rules.html">HTML样式规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/parting_words.html">赠言</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../shell/index.html">Shell 风格指南 - 内容目录</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../shell/background.html">1. 背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/shell_files_and_interpreter_invocation.html">2. Shell文件和解释器调用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/environment.html">3. 环境</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/comments.html">4. 注释</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/formatting.html">5. 格式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/features_and_bugs.html">6. 特性及错误</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/naming_conventions.html">7. 命名约定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/calling_commands.html">8. 调用命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/conclusion.html">9. 结论</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/changelog.html">10. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../typescript/index.html">TypeScript 风格指南</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/syntax.html">1. 语法规范</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/language.html">2. 语言特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/source_organization.html">3. 代码管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/type_system.html">4. 类型系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/consistency.html">5. 一致性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/changelog.html">6. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../javascript/index.html">Javascript 风格指南</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../javascript/background.html">1. 背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../javascript/javascript_language_rules.html">2. Javascript语言规范</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="id1">
+<h1><span class="section-number">10. </span>规则特例<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>前面说明的编程习惯基本都是强制性的. 但所有优秀的规则都允许例外, 这里就是探讨这些特例.</p>
+<section id="id2">
+<h2><span class="section-number">10.1. </span>现有不合规范的代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p><strong>总述</strong></p>
+<p>对于现有不符合既定编程风格的代码可以网开一面.</p>
+<p><strong>说明</strong></p>
+<p>当你修改使用其他风格的代码时, 为了与代码原有风格保持一致可以不使用本指南约定. 如果不放心, 可以与代码原作者或现在的负责人员商讨. 记住, <em>一致性</em> 也包括原有的一致性.</p>
+</section>
+<section id="windows">
+<span id="windows-code"></span><h2><span class="section-number">10.2. </span>Windows 代码<a class="headerlink" href="#windows" title="永久链接至标题">¶</a></h2>
+<p><strong>总述</strong></p>
+<p>Windows 程序员有自己的编程习惯, 主要源于 Windows 头文件和其它 Microsoft 代码. 我们希望任何人都可以顺利读懂你的代码, 所以针对所有平台的 C++ 编程只给出一个单独的指南.</p>
+<p><strong>说明</strong></p>
+<p>如果你习惯使用 Windows 编码风格, 这儿有必要重申一下某些你可能会忘记的指南:</p>
+<ul class="simple">
+<li><p>不要使用匈牙利命名法 (比如把整型变量命名成 <code class="docutils literal notranslate"><span class="pre">iNum</span></code>). 使用 Google 命名约定, 包括对源文件使用 <code class="docutils literal notranslate"><span class="pre">.cc</span></code> 扩展名.</p></li>
+<li><p>Windows 定义了很多原生类型的同义词 (YuleFox 注: 这一点, 我也很反感), 如 <code class="docutils literal notranslate"><span class="pre">DWORD</span></code>, <code class="docutils literal notranslate"><span class="pre">HANDLE</span></code> 等等. 在调用 Windows API 时这是完全可以接受甚至鼓励的. 即使如此, 还是尽量使用原有的 C++ 类型, 例如使用 <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">TCHAR</span> <span class="pre">*</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">LPCTSTR</span></code>.</p></li>
+<li><p>使用 Microsoft Visual C++ 进行编译时, 将警告级别设置为 3 或更高, 并将所有警告(warnings)当作错误(errors)处理.</p></li>
+<li><p>不要使用 <code class="docutils literal notranslate"><span class="pre">#pragma</span> <span class="pre">once</span></code>; 而应该使用 Google 的头文件保护规则. 头文件保护的路径应该相对于项目根目录 (Yang.Y 注: 如 <code class="docutils literal notranslate"><span class="pre">#ifndef</span> <span class="pre">SRC_DIR_BAR_H_</span></code>, 参考 <a class="reference internal" href="headers.html#define-guard"><span class="std std-ref">#define 保护</span></a> 一节).</p></li>
+<li><p>除非万不得已, 不要使用任何非标准的扩展, 如 <code class="docutils literal notranslate"><span class="pre">#pragma</span></code> 和 <code class="docutils literal notranslate"><span class="pre">__declspec</span></code>. 使用 <code class="docutils literal notranslate"><span class="pre">__declspec(dllimport)</span></code> 和 <code class="docutils literal notranslate"><span class="pre">__declspec(dllexport)</span></code> 是允许的, 但必须通过宏来使用, 比如 <code class="docutils literal notranslate"><span class="pre">DLLIMPORT</span></code> 和 <code class="docutils literal notranslate"><span class="pre">DLLEXPORT</span></code>, 这样其他人在分享使用这些代码时可以很容易地禁用这些扩展.</p></li>
+</ul>
+<p>然而, 在 Windows 上仍然有一些我们偶尔需要违反的规则:</p>
+<ul class="simple">
+<li><p>通常我们 <a class="reference internal" href="classes.html#multiple-inheritance"><span class="std std-ref">禁止使用多重继承</span></a>, 但在使用 COM 和 ATL/WTL 类时可以使用多重继承. 为了实现 COM 或 ATL/WTL 类/接口, 你可能不得不使用多重实现继承.</p></li>
+<li><p>虽然代码中不应该使用异常, 但是在 ATL 和部分 STL（包括 Visual C++ 的 STL) 中异常被广泛使用. 使用 ATL 时, 应定义 <code class="docutils literal notranslate"><span class="pre">_ATL_NO_EXCEPTIONS</span></code> 以禁用异常. 你需要研究一下是否能够禁用 STL 的异常, 如果无法禁用, 可以启用编译器异常. (注意这只是为了编译 STL, 自己的代码里仍然不应当包含异常处理).</p></li>
+<li><p>通常为了利用头文件预编译, 每个每个源文件的开头都会包含一个名为 <code class="docutils literal notranslate"><span class="pre">StdAfx.h</span></code> 或 <code class="docutils literal notranslate"><span class="pre">precompile.h</span></code> 的文件. 为了使代码方便与其他项目共享, 请避免显式包含此文件 (除了在 <code class="docutils literal notranslate"><span class="pre">precompile.cc</span></code> 中), 使用 <code class="docutils literal notranslate"><span class="pre">/FI</span></code> 编译器选项以自动包含该文件.</p></li>
+<li><p>资源头文件通常命名为 <code class="docutils literal notranslate"><span class="pre">resource.h</span></code> 且只包含宏, 这一文件不需要遵守本风格指南.</p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="end.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"><span class="section-number">11. </span>结束语</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="formatting.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title"><span class="section-number">9. </span>格式</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021, xinetzone |
+          Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            | <a class="muted-link" href="../../_sources/google/cpp/exceptions.rst.txt"
+               rel="nofollow">
+              显示源代码
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            目录
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">10. 规则特例</a><ul>
+<li><a class="reference internal" href="#id2">10.1. 现有不合规范的代码</a></li>
+<li><a class="reference internal" href="#windows">10.2. Windows 代码</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    </body>
+</html>
