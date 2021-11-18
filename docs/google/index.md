@@ -4,8 +4,12 @@
 :maxdepth: 2
 
 cpp/index
+shell/index
+
+javascript/index
+typescript/index
 ```
 
+
 python/index
-shell/index
-typescript/index
+

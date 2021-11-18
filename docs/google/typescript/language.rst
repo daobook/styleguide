@@ -96,7 +96,7 @@
 
 不要使用 ``#private`` 私有字段（又称私有标识符）语法声明私有成员。
 
-.. code-block:: typescript
+.. code-block::
 
     // 不要这样做！
     class Clazz {

@@ -29,7 +29,7 @@ release = '0.0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "myst_nb",
+    'myst_nb',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -45,7 +45,13 @@ language = 'zh_CN'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = [
+    '_build',
+    'Thumbs.db',
+    '.DS_Store',
+    'google/python/**',
+    'google/javascript/javascript_style_rules.rst'
+]
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -81,12 +87,7 @@ nb_render_priority = {
     'gettext': ()
 }
 
-exclude_patterns = [
-    '_build',
-    'Thumbs.db',
-    '.DS_Store',
-    'google/python/**',
-    'google/shell/**',
-    'google/typescript/**',
-
-]
+# 如果你希望stderr和stdout中的每个输出都被合并成一个流，请使用以下配置。
+# 避免将 jupter 执行报错的信息输出到 cmd 
+nb_merge_streams = True
+execution_allow_errors = True

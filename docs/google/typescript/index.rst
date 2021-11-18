@@ -5,7 +5,6 @@ TypeScript 风格指南
     :hidden:
     :numbered:
 
-    preface
     syntax
     language
     source_organization
