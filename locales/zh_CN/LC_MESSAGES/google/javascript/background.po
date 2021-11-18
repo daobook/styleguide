@@ -18,7 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: ../../google/cpp/index.rst:6
-msgid "C++ 风格指南"
+#: ../../google/javascript/background.rst:2
+msgid "背景"
+msgstr ""
+
+#: ../../google/javascript/background.rst:4
+msgid "在Google的开源项目中，JavaScript是最主要的客户端脚本语言。本指南是使用JavaScript时建议和不建议做法的清单。"
 msgstr ""
 

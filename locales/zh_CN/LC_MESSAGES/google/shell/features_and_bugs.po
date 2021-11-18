@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, xinetzone
+# This file is distributed under the same license as the Style Guide
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Style Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-19 01:11+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../google/shell/features_and_bugs.rst:2
+msgid "特性及错误"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:5
+msgid "命令替换"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:8
+msgid "使用 ``$(command)`` 而不是反引号。"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:10
+msgid "嵌套的反引号要求用反斜杠转义内部的反引号。而 ``$(command)`` 形式嵌套时不需要改变，而且更易于阅读。"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:12
+msgid "例如："
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:23
+msgid "test，[和[["
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:26
+msgid "推荐使用 ``[[ ... ]]`` ，而不是 ``[`` , ``test`` , 和 ``/usr/bin/[`` 。"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:28
+msgid ""
+"因为在 ``[[`` 和 ``]]`` 之间不会有路径名称扩展或单词分割发生，所以使用 ``[[ ... ]]`` 能够减少错误。而且 ``[[ "
+"... ]]`` 允许正则表达式匹配，而 ``[ ... ]`` 不允许。"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:53
+msgid "测试字符串"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:56
+msgid "尽可能使用引用，而不是过滤字符串。"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:58
+msgid "Bash足以在测试中处理空字符串。所以，请使用空（非空）字符串测试，而不是填充字符，使得代码更易于阅读。"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:83
+msgid "为了避免对你测试的目的产生困惑，请明确使用`-z`或者`-n`"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:99
+msgid "文件名的通配符扩展"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:102
+msgid "当进行文件名的通配符扩展时，请使用明确的路径。"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:104
+msgid "因为文件名可能以 ``-`` 开头，所以使用扩展通配符 ``./*`` 比 ``*`` 来得安全得多。"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:124
+msgid "Eval"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:127
+msgid "应该避免使用eval。"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:129
+msgid "当用于给变量赋值时，Eval解析输入，并且能够设置变量，但无法检查这些变量是什么。"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:141
+msgid "管道导向while循环"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:144
+msgid "请使用过程替换或者for循环，而不是管道导向while循环。在while循环中被修改的变量是不能传递给父shell的，因为循环命令是在一个子shell中运行的。"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:146
+msgid "管道导向while循环中的隐式子shell使得追踪bug变得很困难。"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:158
+msgid "如果你确定输入中不包含空格或者特殊符号（通常意味着不是用户输入的），那么可以使用一个for循环。"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:168
+msgid "使用过程替换允许重定向输出，但是请将命令放入一个显式的子shell中，而不是bash为while循环创建的隐式子shell。"
+msgstr ""
+
+#: ../../google/shell/features_and_bugs.rst:184
+msgid "当不需要传递复杂的结果给父shell时可以使用while循环。这通常需要一些更复杂的“解析”。请注意简单的例子使用如awk这类工具可能更容易完成。当你特别不希望改变父shell的范围变量时这可能也是有用的。"
+msgstr ""
+

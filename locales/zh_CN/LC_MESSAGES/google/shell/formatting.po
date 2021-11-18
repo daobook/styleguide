@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, xinetzone
+# This file is distributed under the same license as the Style Guide
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Style Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-19 01:11+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../google/shell/formatting.rst:2
+msgid "格式"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:5
+msgid "缩进"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:8
+msgid "缩进两个空格，没有制表符。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:10
+msgid "在代码块之间请使用空行以提升可读性。缩进为两个空格。无论你做什么，请不要使用制表符。对于已有文件，保持已有的缩进格式。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:13
+msgid "行的长度和长字符串"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:16
+msgid "行的最大长度为80个字符。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:18
+msgid ""
+"如果你必须写长度超过80个字符的字符串，如果可能的话，尽量使用here "
+"document或者嵌入的换行符。长度超过80个字符的文字串且不能被合理地分割，这是正常的。但强烈建议找到一个方法使其变短。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:33
+msgid "管道"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:36
+msgid "如果一行容不下整个管道操作，那么请将整个管道操作分割成每行一个管段。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:38
+msgid "如果一行容得下整个管道操作，那么请将整个管道操作写在同一行。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:40
+msgid "否则，应该将整个管道操作分割成每行一个管段，管道操作的下一部分应该将管道符放在新行并且缩进2个空格。这适用于使用管道符'|'的合并命令链以及使用'||'和'&&'的逻辑运算链。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:54
+msgid "循环"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:57
+msgid "请将 ``; do`` , ``; then`` 和 ``while`` , ``for`` , ``if`` 放在同一行。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:59
+msgid ""
+"shell中的循环略有不同，但是我们遵循跟声明函数时的大括号相同的原则。也就是说， ``; do`` , ``; then`` 应该和 "
+"if/for/while 放在同一行。 ``else`` 应该单独一行，结束语句应该单独一行并且跟开始语句垂直对齐。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:61
+msgid "例如："
+msgstr ""
+
+#: ../../google/shell/formatting.rst:81
+msgid "case语句"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:84
+msgid "通过2个空格缩进可选项。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:85
+msgid "在同一行可选项的模式右圆括号之后和结束符 ``;;`` 之前各需要一个空格。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:86
+msgid "长可选项或者多命令可选项应该被拆分成多行，模式、操作和结束符 ``;;`` 在不同的行。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:88
+msgid ""
+"匹配表达式比 ``case`` 和 ``esac`` "
+"缩进一级。多行操作要再缩进一级。一般情况下，不需要引用匹配表达式。模式表达式前面不应该出现左括号。避免使用 ``;&`` 和 ``;;&`` "
+"符号。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:106
+msgid ""
+"只要整个表达式可读，简单的命令可以跟模式和 ``;;`` "
+"写在同一行。这通常适用于单字母选项的处理。当单行容不下操作时，请将模式单独放一行，然后是操作，最后结束符 ``;;`` "
+"也单独一行。当操作在同一行时，模式的右括号之后和结束符 ``;;`` 之前请使用一个空格分隔。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:125
+msgid "变量扩展"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:128
+msgid "按优先级顺序：保持跟你所发现的一致；引用你的变量；推荐用 ``${var}`` 而不是 ``$var`` ，详细解释如下。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:130
+msgid "这些仅仅是指南，因为作为强制规定似乎饱受争议。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:132
+msgid "以下按照优先顺序列出。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:134
+msgid "与现存代码中你所发现的保持一致。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:135
+msgid "引用变量参阅下面一节，引用。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:136
+msgid "除非绝对必要或者为了避免深深的困惑，否则不要用大括号将单个字符的shell特殊变量或定位变量括起来。推荐将其他所有变量用大括号括起来。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:172
+msgid "引用"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:175
+msgid "除非需要小心不带引用的扩展，否则总是引用包含变量、命令替换符、空格或shell元字符的字符串。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:176
+msgid "推荐引用是单词的字符串（而不是命令选项或者路径名）。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:177
+msgid "千万不要引用整数。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:178
+msgid "注意 ``[[`` 中模式匹配的引用规则。"
+msgstr ""
+
+#: ../../google/shell/formatting.rst:179
+msgid "请使用 ``$@`` 除非你有特殊原因需要使用 ``$*`` 。"
+msgstr ""
+

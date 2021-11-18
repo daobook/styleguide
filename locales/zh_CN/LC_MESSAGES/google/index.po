@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Style Guide \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-18 21:55+0800\n"
+"POT-Creation-Date: 2021-11-19 01:11+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,5 +20,9 @@ msgstr ""
 
 #: ../../google/index.md:1
 msgid "谷歌风格指南"
+msgstr ""
+
+#: ../../google/index.md:14
+msgid "python/index"
 msgstr ""
 

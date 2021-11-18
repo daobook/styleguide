@@ -24,7 +24,7 @@ Lint
     
         dict = 'something awful'  # Bad Idea... pylint: disable=redefined-builtin
         
-    pylint警告是以符号名(如 ``empty-docstring`` )来标识的.google特定的警告则是以``g-``开头.
+    pylint警告是以符号名(如 ``empty-docstring`` )来标识的。google 特定的警告则是以 ``g-`` 开头.
     
     如果警告的符号名不够见名知意，那么请对其增加一个详细解释。
     
@@ -48,7 +48,7 @@ Lint
 --------------------
 
 .. tip::
-    仅对包和模块使用导入,而不单独导入函数或者类。`typing`模块例外。   
+    仅对包和模块使用导入,而不单独导入函数或者类。``typing`` 模块例外。   
 
 定义:
     模块间共享代码的重用机制.
@@ -212,11 +212,11 @@ Lint
     
 缺点:
     导入时可能改变模块行为, 因为导入模块时会对模块级变量赋值. 
-    
+
 结论:
-    避免使用全局变量.
-    鼓励使用模块级的常量,例如 ``MAX_HOLY_HANDGRENADE_COUNT = 3``.注意常量命名必须全部大写,用 ``_`` 分隔.具体参见 `命名规则 <https://google.github.io/styleguide/pyguide.html#s3.16-naming>`_
-    若必须要使用全局变量,应在模块内声明全局变量,并在名称前 ``_`` 使之成为模块内部变量.外部访问必须通过模块级的公共函数.具体参见 `命名规则 <>`_
+    避免使用全局变量。
+    鼓励使用模块级的常量，例如 ``MAX_HOLY_HANDGRENADE_COUNT = 3`` 。注意常量命名必须全部大写,用 ``_`` 分隔.具体参见 `命名规则 <s3.16-naming>`_
+    若必须要使用全局变量，应在模块内声明全局变量,并在名称前 ``_`` 使之成为模块内部变量.外部访问必须通过模块级的公共函数.具体参见 `命名规则 <s3.16-naming>`_
     
     
 嵌套/局部/内部类或函数
@@ -735,11 +735,11 @@ True/False的求值
 结论:
     在你的代码中避免这些特性.     
     
-    当然，利用了这些特性的来编写的一些标准库是值得去使用的，比如 ``abc.ABCMeta``, ``collection.namedtuple``, ``dataclasses`` , ``enum``等.
+    当然，利用了这些特性的来编写的一些标准库是值得去使用的，比如 ``abc.ABCMeta``, ``collection.namedtuple``, ``dataclasses`` , ``enum`` 等.
 
 
 现代python: python3 和from __future__ imports
---------------------
+----------------------------------------------
 
 .. tip::
     尽量使用 python3,  即使使用非 python3 写的代码.也应该尽量兼容.

@@ -18,7 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: ../../google/cpp/index.rst:6
-msgid "C++ 风格指南"
+#: ../../google/shell/conclusion.rst:2
+msgid "结论"
+msgstr ""
+
+#: ../../google/shell/conclusion.rst:4
+msgid "使用常识并保持一致。"
+msgstr ""
+
+#: ../../google/shell/conclusion.rst:6
+msgid "请花几分钟阅读在C++风格指南底部的赠别部分。"
 msgstr ""
 

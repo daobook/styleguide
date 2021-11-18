@@ -49,7 +49,6 @@ exclude_patterns = [
     '_build',
     'Thumbs.db',
     '.DS_Store',
-    'google/python/**',
     'google/javascript/javascript_style_rules.rst'
 ]
 

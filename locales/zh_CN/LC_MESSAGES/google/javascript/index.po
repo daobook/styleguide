@@ -18,7 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: ../../google/cpp/index.rst:6
-msgid "C++ 风格指南"
+#: ../../google/javascript/index.rst:6
+msgid "Javascript 风格指南"
+msgstr ""
+
+#: ../../google/javascript/index.rst:15
+msgid "javascript_style_rules"
 msgstr ""
 

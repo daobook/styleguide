@@ -18,7 +18,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: ../../google/cpp/index.rst:6
-msgid "C++ 风格指南"
+#: ../../index.rst:4
+msgid "导航"
+msgstr ""
+
+#: ../../index.rst:2
+msgid "风格指南"
+msgstr ""
+
+#: ../../index.rst:11
+msgid "目录与索引"
+msgstr ""
+
+#: ../../index.rst:13
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../index.rst:14
+msgid ":ref:`modindex`"
+msgstr ""
+
+#: ../../index.rst:15
+msgid ":ref:`search`"
 msgstr ""
 

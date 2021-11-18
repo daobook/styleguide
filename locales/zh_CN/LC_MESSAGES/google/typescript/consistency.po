@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, xinetzone
+# This file is distributed under the same license as the Style Guide
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Style Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-19 01:11+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../google/typescript/consistency.rst:2
+msgid "一致性"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:4
+msgid ""
+"对于本文中并未明确解释的任何与代码风格有关的问题，都应当与同一文件中其它代码的现有写法 **保持一致** "
+"。如果问题仍未得到解决，则应当参考同一文件夹下其它文件的写法。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:9
+msgid "目标"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:11
+msgid "通常情况下，程序员自己是最了解他们的代码需求的人。所以，对于那些答案不唯一、而且最优解取决于实际场景的问题，一般应当由当事人根据情况自行决定解决方案。因此，对于这类问题，默认回答往往都是“不管了”。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:13
+msgid "以下几点则是其中的特例，它们解释了为什么要在这篇风格指南中编写全局性的规范。对于程序员自行规定的代码风格，应当根据以下几个原则对其进行评估："
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:15
+msgid "**应当避免使用已知的会导致问题的代码范式，尤其是对于这门语言的新手而言**"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:17
+#: ../../google/typescript/consistency.rst:31
+#: ../../google/typescript/consistency.rst:41
+msgid "例如："
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:19
+msgid ""
+"``any`` 是一个容易被误用的类型（某个变量 *真的* "
+"可以既是一个数字，同时还可以作为函数被调用吗？），因此关于它的用法，指南中提出了一些建议。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:20
+msgid "TypeScript 的命名空间会为闭包优化带来问题。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:21
+msgid "在文件名中使用句点 ``.`` 会让导入语句的样式变得不美观且令人困惑。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:22
+msgid "类中的静态函数对优化十分不友好，同样的功能完全可以由文件级函数实现。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:23
+msgid "不熟悉 ``private`` 关键字的用户会试图使用下划线将函数名变得混乱难懂。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:25
+msgid "**跨项目的代码应当保持一致的用法**"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:27
+msgid "如果有两种语义上等价只是形式上不同的写法，应当只选择其中的一种，以避免代码中发生无意义的发散演化，同时也避免在代码审查的过程中进行无意义的争辩。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:29
+msgid "除此之外，还应当尽可能与 JavaScript 的代码风格保持一致，因为大部分程序员都会同时使用两种语言。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:33
+msgid "变量名的首字母大小写风格。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:34
+msgid "``x as T`` 语法和等价的 ``<T>x`` 语法（后者不允许使用）。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:35
+msgid "``Array<[number, number]>`` 和 ``[number, number][]`` 。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:37
+msgid "**代码应当具有长期可维护性**"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:39
+msgid "代码的生命周期往往比其原始作者为其工作的时间要长，而 TypeScript 团队必须保证谷歌的所有工作在未来依然能顺利进行。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:43
+msgid "使用自动化工具修改代码，所有的代码均经过自动格式化以符合空格样式的规范。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:44
+msgid "规定了一组 Clousure 编译器标识，使 TS 代码库在编写过程中无需考虑编译选项的问题，也让用户能够安全地使用共享库。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:45
+msgid "代码在使用其它库时必须进行导入（严格依赖），以便依赖项中的重构不会改变其用户的依赖项。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:46
+msgid "用户必须编写测试。如果没有测试，就无法保证对语言或 google3 库中的改动不会破坏用户现有的代码。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:48
+msgid "**代码审查员应当着力于提高代码质量，而非强制推行各种规则**"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:50
+msgid "如果能够将规范实现为自动化检查工具，这通常都是一个好的做法。这对上文中的第三条原则也有所帮助。"
+msgstr ""
+
+#: ../../google/typescript/consistency.rst:52
+msgid "对于确实无关紧要的问题，例如语言中十分罕见的边界情况，或者避免了一个不太可能发生的 Bug ，等等，不妨直接无视之。"
+msgstr ""
+

@@ -1,0 +1,331 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, xinetzone
+# This file is distributed under the same license as the Style Guide
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Style Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-19 01:11+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../google/cpp/naming.rst:2
+msgid "命名约定"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:4
+msgid ""
+"最重要的一致性规则是命名管理. 命名的风格能让我们在不需要去查找类型声明的条件下快速地了解某个名字代表的含义: 类型, 变量, 函数, 常量, "
+"宏, 等等, 甚至. 我们大脑中的模式匹配引擎非常依赖这些命名规则."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:6
+msgid "命名规则具有一定随意性, 但相比按个人喜好命名, 一致性更重要, 所以无论你认为它们是否重要, 规则总归是规则."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:11
+msgid "通用命名规则"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:13 ../../google/cpp/naming.rst:43
+#: ../../google/cpp/naming.rst:72 ../../google/cpp/naming.rst:101
+#: ../../google/cpp/naming.rst:154 ../../google/cpp/naming.rst:171
+#: ../../google/cpp/naming.rst:192 ../../google/cpp/naming.rst:207
+#: ../../google/cpp/naming.rst:235 ../../google/cpp/naming.rst:251
+msgid "**总述**"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:15
+msgid "函数命名, 变量命名, 文件命名要有描述性; 少用缩写."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:17 ../../google/cpp/naming.rst:47
+#: ../../google/cpp/naming.rst:76 ../../google/cpp/naming.rst:105
+#: ../../google/cpp/naming.rst:162 ../../google/cpp/naming.rst:175
+#: ../../google/cpp/naming.rst:211 ../../google/cpp/naming.rst:239
+msgid "**说明**"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:19
+msgid ""
+"尽可能使用描述性的命名, 别心疼空间, 毕竟相比之下让代码易于新读者理解更重要. 不要用只有项目开发者能理解的缩写, "
+"也不要通过砍掉几个字母来缩写单词."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:36
+msgid "注意, 一些特定的广为人知的缩写是允许的, 例如用 ``i`` 表示迭代变量和用 ``T`` 表示模板参数."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:38
+msgid ""
+"模板参数的命名应当遵循对应的分类: 类型模板参数应当遵循 :ref:`类型命名 <type-names>` 的规则, 而非类型模板应当遵循 "
+":ref:`变量命名 <variable-names>` 的规则."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:41
+msgid "文件命名"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:45
+msgid "文件名要全部小写, 可以包含下划线 (``_``) 或连字符 (``-``), 依照项目的约定. 如果没有约定, 那么 \"``_``\" 更好."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:49
+msgid "可接受的文件命名示例:"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:51
+msgid "``my_useful_class.cc``"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:53
+msgid "``my-useful-class.cc``"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:55
+msgid "``myusefulclass.cc``"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:57
+msgid "``myusefulclass_test.cc`` // ``_unittest`` 和 ``_regtest`` 已弃用."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:59
+msgid ""
+"C++ 文件要以 ``.cc`` 结尾, 头文件以 ``.h`` 结尾. 专门插入文本的文件则以 ``.inc`` 结尾, 参见 "
+":ref:`头文件自足 <self-contained-headers>`."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:61
+msgid "不要使用已经存在于 ``/usr/include`` 下的文件名 (Yang.Y 注: 即编译器搜索系统头文件的路径), 如 ``db.h``."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:63
+msgid ""
+"通常应尽量让文件名更加明确. ``http_server_logs.h`` 就比 ``logs.h`` 要好. 定义类时文件名一般成对出现, 如 "
+"``foo_bar.h`` 和 ``foo_bar.cc``, 对应于类 ``FooBar``."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:65
+msgid "内联函数必须放在 ``.h`` 文件中. 如果内联函数比较短, 就直接放在 ``.h`` 中."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:70
+msgid "类型命名"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:74
+msgid "类型名称的每个单词首字母均大写, 不包含下划线: ``MyExcitingClass``, ``MyExcitingEnum``."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:78
+msgid ""
+"所有类型命名 —— 类, 结构体, 类型定义 (``typedef``), 枚举, 类型模板参数 —— 均使用相同约定, 即以大写字母开始, "
+"每个单词首字母均大写, 不包含下划线. 例如:"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:99
+msgid "变量命名"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:103
+msgid ""
+"变量 (包括函数参数) 和数据成员名一律小写, 单词之间用下划线连接. 类的成员变量以下划线结尾, 但结构体的就不用, 如: "
+"``a_local_variable``, ``a_struct_data_member``, ``a_class_data_member_``."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:108
+msgid "普通变量命名"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:110
+msgid "举例:"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:120
+msgid "类数据成员"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:122
+msgid "不管是静态的还是非静态的, 类数据成员都可以和普通变量一样, 但要接下划线."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:135
+msgid "结构体变量"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:137
+msgid "不管是静态的还是非静态的, 结构体数据成员都可以和普通变量一样, 不用像类那样接下划线:"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:147
+msgid "结构体与类的使用讨论, 参考 :ref:`结构体 vs. 类 <structs-vs-classes>`."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:152
+msgid "常量命名"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:156
+msgid ""
+"声明为 ``constexpr`` 或 ``const`` 的变量, 或在程序运行期间其值始终保持不变的, 命名时以 \"k\" 开头, "
+"大小写混合. 例如:"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:164
+msgid ""
+"所有具有静态存储类型的变量 (例如静态变量或全局变量, 参见 `存储类型 "
+"<http://en.cppreference.com/w/cpp/language/storage_duration#Storage_duration>`_)"
+" 都应当以此方式命名. 对于其他存储类型的变量, 如自动变量等, 这条规则是可选的. 如果不采用这条规则, 就按照一般的变量命名规则."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:169
+msgid "函数命名"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:173
+msgid ""
+"常规函数使用大小写混合, 取值和设值函数则要求与变量名匹配: ``MyExcitingFunction()``, "
+"``MyExcitingMethod()``, ``my_exciting_member_variable()``, "
+"``set_my_exciting_member_variable()``."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:177
+msgid ""
+"一般来说, 函数名的每个单词首字母大写 (即 \"驼峰变量名\" 或 \"帕斯卡变量名\"), 没有下划线. 对于首字母缩写的单词, "
+"更倾向于将它们视作一个单词进行首字母大写 (例如, 写作 ``StartRpc()`` 而非 ``StartRPC()``)."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:185
+msgid ""
+"(同样的命名规则同时适用于类作用域与命名空间作用域的常量, 因为它们是作为 API 的一部分暴露对外的, 因此应当让它们看起来像是一个函数, "
+"因为在这时, 它们实际上是一个对象而非函数的这一事实对外不过是一个无关紧要的实现细节.)"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:187
+msgid ""
+"取值和设值函数的命名与变量一致. 一般来说它们的名称与实际的成员变量对应, 但并不强制要求. 例如 ``int count()`` 与 "
+"``void set_count(int count)``."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:190
+msgid "命名空间命名"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:194
+msgid "命名空间以小写字母命名. 最高级命名空间的名字取决于项目名称. 要注意避免嵌套命名空间的名字之间和常见的顶级命名空间的名字之间发生冲突."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:196
+msgid "顶级命名空间的名称应当是项目名或者是该命名空间中的代码所属的团队的名字. 命名空间中的代码, 应当存放于和命名空间的名字匹配的文件夹或其子文件夹中."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:198
+msgid ""
+"注意 :ref:`不使用缩写作为名称 <general-naming-rules>` 的规则同样适用于命名空间. "
+"命名空间中的代码极少需要涉及命名空间的名称, 因此没有必要在命名空间中使用缩写."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:200
+msgid ""
+"要避免嵌套的命名空间与常见的顶级命名空间发生名称冲突. 由于名称查找规则的存在, 命名空间之间的冲突完全有可能导致编译失败. 尤其是, "
+"不要创建嵌套的 ``std`` 命名空间. 建议使用更独特的项目标识符 (``websearch::index``, "
+"``websearch::index_util``) 而非常见的极易发生冲突的名称 (比如 ``websearch::util``)."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:202
+msgid ""
+"对于 ``internal`` 命名空间, 要当心加入到同一 ``internal`` 命名空间的代码之间发生冲突 "
+"(由于内部维护人员通常来自同一团队, 因此常有可能导致冲突). 在这种情况下, 请使用文件名以使得内部名称独一无二 (例如对于 "
+"``frobber.h``, 使用 ``websearch::index::frobber_internal``)."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:205
+msgid "枚举命名"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:209
+msgid ""
+"枚举的命名应当和 :ref:`常量 <constant-names>` 或 :ref:`宏 <macro-names>` 一致: "
+"``kEnumName`` 或是 ``ENUM_NAME``."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:213
+msgid ""
+"单独的枚举值应该优先采用 :ref:`常量 <constant-names>` 的命名方式. 但 :ref:`宏 <macro-names>` "
+"方式的命名也可以接受. 枚举名 ``UrlTableErrors`` (以及 ``AlternateUrlTableErrors``) 是类型, "
+"所以要用大小写混合的方式."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:228
+msgid ""
+"2009 年 1 月之前, 我们一直建议采用 :ref:`宏 <macro-names>` 的方式命名枚举值. 由于枚举值和宏之间的命名冲突, "
+"直接导致了很多问题. 由此, 这里改为优先选择常量风格的命名方式. 新代码应该尽可能优先使用常量风格. 但是老代码没必要切换到常量风格, "
+"除非宏风格确实会产生编译期问题."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:233
+msgid "宏命名"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:237
+msgid ""
+"你并不打算 :ref:`使用宏 <preprocessor-macros>`, 对吧? 如果你一定要用, 像这样命名: "
+"``MY_MACRO_THAT_SCARES_SMALL_CHILDREN``."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:241
+msgid ""
+"参考 :ref:`预处理宏 <preprocessor-macros>`; 通常 *不应该* 使用宏. 如果不得不用, "
+"其命名像枚举命名一样全部大写, 使用下划线:"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:249
+msgid "命名规则的特例"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:253
+msgid "如果你命名的实体与已有 C/C++ 实体相似, 可参考现有命名策略."
+msgstr ""
+
+#: ../../google/cpp/naming.rst:255
+msgid "``bigopen()``: 函数名, 参照 ``open()`` 的形式"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:257
+msgid "``uint``: ``typedef``"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:259
+msgid "``bigpos``: ``struct`` 或 ``class``, 参照 ``pos`` 的形式"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:261
+msgid "``sparse_hash_map``: STL 型实体; 参照 STL 命名约定"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:263
+msgid "``LONGLONG_MAX``: 常量, 如同 ``INT_MAX``"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:266
+msgid "译者（acgtyrant）笔记"
+msgstr ""
+
+#: ../../google/cpp/naming.rst:268
+msgid ""
+"感觉 Google 的命名约定很高明, 比如写了简单的类 QueryResult, 接着又可以直接定义一个变量 query_result, "
+"区分度很好; 再次, 类内变量以下划线结尾, 那么就可以直接传入同名的形参, 比如 "
+"``TextQuery::TextQuery(std::string word) : word_(word) {}`` , 其中 "
+"``word_`` 自然是类内私有成员."
+msgstr ""
+

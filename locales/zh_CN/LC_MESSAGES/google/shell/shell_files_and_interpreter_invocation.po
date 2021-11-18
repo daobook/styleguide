@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, xinetzone
+# This file is distributed under the same license as the Style Guide
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Style Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-19 01:11+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../google/shell/shell_files_and_interpreter_invocation.rst:2
+msgid "Shell文件和解释器调用"
+msgstr ""
+
+#: ../../google/shell/shell_files_and_interpreter_invocation.rst:5
+msgid "文件扩展名"
+msgstr ""
+
+#: ../../google/shell/shell_files_and_interpreter_invocation.rst:8
+msgid "可执行文件应该没有扩展名（强烈建议）或者使用.sh扩展名。库文件必须使用.sh作为扩展名，而且应该是不可执行的。"
+msgstr ""
+
+#: ../../google/shell/shell_files_and_interpreter_invocation.rst:10
+msgid "当执行一个程序时，并不需要知道它是用什么语言编写的。而且shell脚本也不要求有扩展名。所以我们更喜欢可执行文件没有扩展名。"
+msgstr ""
+
+#: ../../google/shell/shell_files_and_interpreter_invocation.rst:12
+msgid "然而，对于库文件，知道其用什么语言编写的是很重要的，有时候会需要使用不同语言编写的相似的库文件。使用.sh这样特定语言后缀作为扩展名，就使得用不同语言编写的具有相同功能的库文件可以采用一样的名称。"
+msgstr ""
+
+#: ../../google/shell/shell_files_and_interpreter_invocation.rst:16
+msgid "SUID / SGID"
+msgstr ""
+
+#: ../../google/shell/shell_files_and_interpreter_invocation.rst:19
+msgid "SUID(Set User ID)和SGID(Set Group ID)在shell脚本中是被禁止的。"
+msgstr ""
+
+#: ../../google/shell/shell_files_and_interpreter_invocation.rst:21
+msgid "shell存在太多的安全问题，以致于如果允许SUID/SGID会使得shell几乎不可能足够安全。虽然bash使得运行SUID非常困难，但在某些平台上仍然有可能运行，这就是为什么我们明确提出要禁止它。"
+msgstr ""
+
+#: ../../google/shell/shell_files_and_interpreter_invocation.rst:23
+msgid "如果你需要较高权限的访问请使用 ``sudo`` 。"
+msgstr ""
+

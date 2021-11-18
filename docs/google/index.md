@@ -4,10 +4,10 @@
 :maxdepth: 2
 
 cpp/index
+python/index
 shell/index
-
-javascript/index
 typescript/index
+javascript/index
 ```
 
 
