@@ -5,11 +5,8 @@
 
 cpp/index
 python/index
+html-css/index
 shell/index
 typescript/index
 javascript/index
 ```
-
-
-python/index
-
