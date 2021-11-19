@@ -1,0 +1,418 @@
+<!doctype html>
+<html class="no-js" lang="zh_CN">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="author" title="关于这些文档" href="../../about.html" /><link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="HTML/CSS 风格指南" href="../html-css/index.html" /><link rel="prev" title="3. README.md files" href="READMEs.html" />
+
+    <meta name="generator" content="sphinx-4.3.0, furo 2021.11.16"/>
+        <title>4. Philosophy - Style Guide 0.0.1 文档</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=916d6ed8f59335acffa15474ff504849343d4c76" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=0af69da206d614734f649b27d4cdc2dd6c31f41d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/default.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Style Guide 0.0.1 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Style Guide 0.0.1 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=搜索 name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">导航</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">谷歌风格指南</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">谷歌文档指南</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="style.html">1. Markdown style guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="best_practices.html">2. Documentation Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="READMEs.html">3. README.md files</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">4. Philosophy</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../html-css/index.html">HTML/CSS 风格指南</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../html-css/general/index.html">1. 通用</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../html-css/general/style-rules.html">1.1. 通用样式规则</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../html-css/general/formatting-rules.html">1.2. 通用排版规则</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../html-css/general/meta-rules.html">1.3. 通用文档级元数据规则</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../html-css/html/index.html">2. HTML</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../html-css/html/style-rules.html">2.1. HTML 样式规则</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../html-css/html/formatting-rules.html">2.2. HTML 格式规则</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../html-css/css/index.html">3. CSS</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../html-css/css/style-rules.html">3.1. CSS 样式规则</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../html-css/css/formatting-rules.html">3.2. CSS格式化规则</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../html-css/css/meta-rules.html">3.3. CSS 元数据规则</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../html-css/parting_words.html">4. 赠言</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../python/index.html">Python 风格指南</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/background.html">1. 背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/python_language_rules.html">2. Python语言规范</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/python_style_rules.html">3. Python 风格规范</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/parting_words.html">4. 临别赠言</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/changelog.html">5. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../cpp/index.html">C++ 风格指南</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/headers.html">1. 头文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/scoping.html">2. 作用域</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/classes.html">3. 类</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/functions.html">4. 函数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/magic.html">5. 来自 Google 的奇技</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/others.html">6. 其他 C++ 特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/naming.html">7. 命名约定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/comments.html">8. 注释</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/formatting.html">9. 格式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/exceptions.html">10. 规则特例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/end.html">11. 结束语</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/changelog.html">12. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../shell/index.html">Shell 风格指南</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../shell/background.html">1. 背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/shell_files_and_interpreter_invocation.html">2. Shell文件和解释器调用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/environment.html">3. 环境</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/comments.html">4. 注释</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/formatting.html">5. 格式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/features_and_bugs.html">6. 特性及错误</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/naming_conventions.html">7. 命名约定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/calling_commands.html">8. 调用命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/conclusion.html">9. 结论</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shell/changelog.html">10. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../typescript/index.html">TypeScript 风格指南</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/syntax.html">1. 语法规范</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/language.html">2. 语言特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/source_organization.html">3. 代码管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/type_system.html">4. 类型系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/consistency.html">5. 一致性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../typescript/changelog.html">6. 变更日志</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../javascript/index.html">Javascript 风格指南</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../javascript/background.html">1. 背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../javascript/javascript_language_rules.html">2. Javascript语言规范</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGES.html">变更</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">关于</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="philosophy">
+<h1><span class="section-number">4. </span>Philosophy<a class="headerlink" href="#philosophy" title="永久链接至标题">¶</a></h1>
+<p>埏埴以為器，當其無，有器之用.</p>
+<p><em>Clay becomes pottery through craft, but it’s the emptiness that makes a pot
+useful.</em></p>
+<p>- <a class="reference external" href="http://ctext.org/dictionary.pl?if=en&amp;id=11602">Laozi</a></p>
+<section id="radical-simplicity">
+<h2><span class="section-number">4.1. </span>Radical simplicity<a class="headerlink" href="#radical-simplicity" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Scalability and interoperability</strong> are more important than a menagerie of
+unessential features. Scale comes from simplicity, speed, and ease.
+Interoperability comes from unadorned, digestible content.</p></li>
+<li><p><strong>Fewer distractions</strong> make for better writing and more productive reading.</p></li>
+<li><p><strong>New features should never interfere with the simplest use case</strong> and should
+remain invisible to users who don’t need them.</p></li>
+<li><p><strong>This guide is designed for the average engineer</strong> – the busy,
+just-want-to-go-back-to-coding engineer. Large and complex documentation is
+possible but not the primary focus.</p></li>
+<li><p><strong>Minimizing context switching makes people happier.</strong> Engineers should be
+able to interact with documentation using the same tools they use to read and
+write code.</p></li>
+</ul>
+</section>
+<section id="readable-source-text">
+<h2><span class="section-number">4.2. </span>Readable source text<a class="headerlink" href="#readable-source-text" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Plain text not only suffices, it is superior</strong>. Markdown itself is not
+essential to this formula, but it is the best and most widely supported
+solution right now. HTML is generally not encouraged.</p></li>
+<li><p><strong>Content and presentation should not mingle</strong>. It should always be possible
+to ditch the renderer and read the essential information at source. Users
+should never have to touch the presentation layer if they don’t want to.</p></li>
+<li><p><strong>Portability and future-proofing leave room for the unimagined integrations
+to come</strong>, and are best achieved by keeping the source as human-readable as
+possible.</p></li>
+<li><p><strong>Static content is better than dynamic</strong>, because content should not depend
+on the features of any one server. However, <strong>fresh is better than stale</strong>. We
+strive to balance these needs.</p></li>
+</ul>
+</section>
+<section id="minimum-viable-documentation">
+<h2><span class="section-number">4.3. </span>Minimum viable documentation<a class="headerlink" href="#minimum-viable-documentation" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Docs thrive when they’re treated like tests</strong>: a necessary chore one learns
+to savor because it rewards over time.
+See <a class="reference internal" href="best_practices.html"><span class="doc std std-doc">Best Practices</span></a>.</p></li>
+<li><p><strong>Brief and utilitarian is better than long and exhaustive</strong>. The vast
+majority of users need only a small fraction of the author’s total knowledge,
+but they need it quickly and often.</p></li>
+</ul>
+</section>
+<section id="better-is-better-than-perfect">
+<h2><span class="section-number">4.4. </span>Better is better than perfect<a class="headerlink" href="#better-is-better-than-perfect" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Incremental improvement is better than prolonged debate</strong>. Patience and
+tolerance of imperfection allow projects to evolve organically.</p></li>
+<li><p><strong>Don’t lick the cookie, pass the plate</strong>. We’re drowning in potentially
+impactful projects. Choose only those you can really handle and release those
+you can’t.</p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../html-css/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>下一页</span>
+                </div>
+                <div class="title">HTML/CSS 风格指南</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="READMEs.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>上一页</span>
+                </div>
+                
+                <div class="title"><span class="section-number">3. </span>README.md files</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021, xinetzone |
+          Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            | <a class="muted-link" href="../../_sources/google/docguide/philosophy.md.txt"
+               rel="nofollow">
+              显示源代码
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            目录
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">4. Philosophy</a><ul>
+<li><a class="reference internal" href="#radical-simplicity">4.1. Radical simplicity</a></li>
+<li><a class="reference internal" href="#readable-source-text">4.2. Readable source text</a></li>
+<li><a class="reference internal" href="#minimum-viable-documentation">4.3. Minimum viable documentation</a></li>
+<li><a class="reference internal" href="#better-is-better-than-perfect">4.4. Better is better than perfect</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    </body>
+</html>
