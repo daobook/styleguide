@@ -29,7 +29,36 @@ release = '0.0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'myst_nb',
+    "myst_nb",
+    "sphinx.ext.extlinks",
+    "sphinx.ext.intersphinx",
+    "sphinx_copybutton",
+    "sphinx_panels",
+    "sphinx_inline_tabs",
+    # "sphinx.ext.todo",
+    # "sphinxcontrib.bibtex",
+    # "sphinx_togglebutton",
+    # "sphinx.ext.viewcode",
+    # "sphinx.ext.autodoc",
+    # "sphinx.ext.doctest",
+    # "sphinx_design",
+    # "sphinx.ext.ifconfig",
+    # "sphinx_automodapi.automodapi",
+    # "sphinxext.opengraph",
+]
+
+myst_enable_extensions = [
+    "colon_fence",
+    # "amsmath",
+    # "deflist",
+    # "dollarmath",
+    # "html_admonition",
+    # "html_image",
+    "linkify",
+    # "replacements",
+    # "smartquotes",
+    # "substitution",
+    # "tasklist",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -90,3 +119,11 @@ nb_render_priority = {
 # 避免将 jupter 执行报错的信息输出到 cmd 
 nb_merge_streams = True
 execution_allow_errors = True
+
+
+
+extlinks = {
+    'github': ('https://github.com/%s', ''),
+    'daobook': ('https://daobook.github.io/%s', ''),
+    'google': ('https://google.github.io/%s', ''),
+}

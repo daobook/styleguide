@@ -1,0 +1,9 @@
+msgid "Home"
+msgstr "主页"
+
+msgid "Previous"
+msgstr "上一页"
+
+msgid "Next"
+msgstr "下一页"
+
