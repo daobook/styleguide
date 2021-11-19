@@ -1,31 +1,41 @@
-通用样式规则
-================
+# 通用样式规则
 
-协议
----------------
+## 协议
 
-嵌入式资源省略协议头。
+尽可能对嵌入式资源使用 HTTPS。
 
-省略图片、媒体文件、样式表以及脚本的URL协议头部分（http:、https:），不使用这两个协议的文件则不省略。
-省略协议头，即让URL变成相对地址，可以避免协议混合及小文件重复下载。
+始终使用 HTTPS（`https:`）来处理图像和其他媒体文件、样式表和脚本，除非相应的文件无法通过 HTTPS 获得。
 
-.. code-block:: html
-
-  <!-- 不推荐 -->
-  <script src="http://www.google.com/js/gweb/analytics/autotrack.js"></script>
+:::{tab} HTML
+````{warning}
+```html
+<!-- 不推荐 省略该协议 -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   
-  <!-- 推荐 -->
-  <script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
-  
-.. code-block:: css
+<!-- 不推荐 使用 HTTP -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+```
+````
 
-  /* 不推荐 */
-  .example {
-   background: url(http://www.google.com/images/example);
-  }
-  
-  /* 推荐 */
-  .example {
-    background: url(//www.google.com/images/example);
-  }
+```html
+<!-- 推荐 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+```
+:::
 
+:::{tab} CSS
+````{warning}
+```css
+/* 不推荐 省略该协议 */
+@import '//fonts.googleapis.com/css?family=Open+Sans';
+
+/*  不推荐 使用 HTTP  */
+@import 'http://fonts.googleapis.com/css?family=Open+Sans';
+```
+````
+
+```css
+/* 推荐 */
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+```
+:::

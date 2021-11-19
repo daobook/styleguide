@@ -54,7 +54,7 @@ myst_enable_extensions = [
     # "dollarmath",
     # "html_admonition",
     # "html_image",
-    "linkify",
+    # "linkify",
     # "replacements",
     # "smartquotes",
     # "substitution",
@@ -92,6 +92,7 @@ html_theme = 'furo'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+html_css_files = ["default.css"]
 
 # 国际化
 locale_dirs = ['../locales/']  # path is example but recommended.

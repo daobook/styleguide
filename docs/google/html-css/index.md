@@ -4,7 +4,7 @@
 
 ```{toctree}
 :maxdepth: 2
-:glob:
+:numbered:
 :hidden:
 
 general/index
