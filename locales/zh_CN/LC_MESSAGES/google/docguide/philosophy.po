@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, xinetzone
+# This file is distributed under the same license as the Style Guide
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Style Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-19 13:53+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../google/docguide/philosophy.md:1
+msgid "Philosophy"
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:3
+msgid "埏埴以為器，當其無，有器之用."
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:5
+msgid ""
+"*Clay becomes pottery through craft, but it's the emptiness that makes a "
+"pot useful.*"
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:8
+msgid "\\- [Laozi](http://ctext.org/dictionary.pl?if=en&id=11602)"
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:10
+msgid "Radical simplicity"
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:12
+msgid ""
+"**Scalability and interoperability** are more important than a menagerie "
+"of unessential features. Scale comes from simplicity, speed, and ease. "
+"Interoperability comes from unadorned, digestible content."
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:16
+msgid ""
+"**Fewer distractions** make for better writing and more productive "
+"reading."
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:18
+msgid ""
+"**New features should never interfere with the simplest use case** and "
+"should remain invisible to users who don't need them."
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:21
+msgid ""
+"**This guide is designed for the average engineer** -- the busy, just-"
+"want-to-go-back-to-coding engineer. Large and complex documentation is "
+"possible but not the primary focus."
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:25
+msgid ""
+"**Minimizing context switching makes people happier.** Engineers should "
+"be able to interact with documentation using the same tools they use to "
+"read and write code."
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:29
+msgid "Readable source text"
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:31
+msgid ""
+"**Plain text not only suffices, it is superior**. Markdown itself is not "
+"essential to this formula, but it is the best and most widely supported "
+"solution right now. HTML is generally not encouraged."
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:35
+msgid ""
+"**Content and presentation should not mingle**. It should always be "
+"possible to ditch the renderer and read the essential information at "
+"source. Users should never have to touch the presentation layer if they "
+"don't want to."
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:39
+msgid ""
+"**Portability and future-proofing leave room for the unimagined "
+"integrations to come**, and are best achieved by keeping the source as "
+"human-readable as possible."
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:43
+msgid ""
+"**Static content is better than dynamic**, because content should not "
+"depend on the features of any one server. However, **fresh is better than"
+" stale**. We strive to balance these needs."
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:47
+msgid "Minimum viable documentation"
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:49
+msgid ""
+"**Docs thrive when they're treated like tests**: a necessary chore one "
+"learns to savor because it rewards over time. See [Best "
+"Practices](best_practices.md)."
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:53
+msgid ""
+"**Brief and utilitarian is better than long and exhaustive**. The vast "
+"majority of users need only a small fraction of the author's total "
+"knowledge, but they need it quickly and often."
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:57
+msgid "Better is better than perfect"
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:59
+msgid ""
+"**Incremental improvement is better than prolonged debate**. Patience and"
+" tolerance of imperfection allow projects to evolve organically."
+msgstr ""
+
+#: ../../google/docguide/philosophy.md:62
+msgid ""
+"**Don't lick the cookie, pass the plate**. We're drowning in potentially "
+"impactful projects. Choose only those you can really handle and release "
+"those you can't."
+msgstr ""
+

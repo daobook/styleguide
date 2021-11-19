@@ -2,12 +2,6 @@
 
 About README.md files.
 
-1.  [Overview](#overview)
-1.  [Guidelines](#guidelines)
-1.  [Filename](#filename)
-1.  [Contents](#contents)
-1.  [Example](#example)
-
 ## Overview
 
 `README.md` files are Markdown files that describe a directory.

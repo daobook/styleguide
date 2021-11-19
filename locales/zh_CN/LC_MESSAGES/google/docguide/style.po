@@ -1,0 +1,392 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, xinetzone
+# This file is distributed under the same license as the Style Guide
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Style Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-19 13:53+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../google/docguide/style.md:1
+msgid "Markdown style guide"
+msgstr ""
+
+#: ../../google/docguide/style.md:3
+msgid ""
+"Much of what makes Markdown great is the ability to write plain text, and"
+" get great formatted output as a result. To keep the slate clean for the "
+"next author, your Markdown should be simple and consistent with the whole"
+" corpus wherever possible."
+msgstr ""
+
+#: ../../google/docguide/style.md:8
+msgid "We seek to balance three goals:"
+msgstr ""
+
+#: ../../google/docguide/style.md:10
+msgid "*Source text is readable and portable.*"
+msgstr ""
+
+#: ../../google/docguide/style.md:11
+msgid "*Markdown files are maintainable over time and across teams.*"
+msgstr ""
+
+#: ../../google/docguide/style.md:12
+msgid "*The syntax is simple and easy to remember.*"
+msgstr ""
+
+#: ../../google/docguide/style.md:14
+msgid "Document layout"
+msgstr ""
+
+#: ../../google/docguide/style.md:16
+msgid ""
+"In general, most documents benefit from some variation of the following "
+"layout:"
+msgstr ""
+
+#: ../../google/docguide/style.md:34
+msgid ""
+"`# Document Title`: The first heading should be a level one heading, and "
+"should ideally be the same or nearly the same as the filename. The first "
+"level one heading is used as the page `<title>`."
+msgstr ""
+
+#: ../../google/docguide/style.md:38
+msgid ""
+"`author`: *Optional*. If you'd like to claim ownership of the document or"
+" if you are very proud of it, add yourself under the title. However, "
+"revision history generally suffices."
+msgstr ""
+
+#: ../../google/docguide/style.md:42
+msgid ""
+"`Short introduction.` 1-3 sentences providing a high-level overview of "
+"the topic. Imagine yourself as a complete newbie, who landed on your "
+"\"Extending Foo\" doc and needs to know the most basic assumptions you "
+"take for granted. \"What is Foo? Why would I extend it?\""
+msgstr ""
+
+#: ../../google/docguide/style.md:47
+msgid ""
+"`[TOC]`: if you use hosting that supports table of contents, such as "
+"Gitiles, put `[TOC]` after the short introduction. See [`[TOC]` "
+"documentation](https://gerrit.googlesource.com/gitiles/+/master/Documentation/markdown.md"
+"#Table-of-contents)."
+msgstr ""
+
+#: ../../google/docguide/style.md:51
+msgid "`## Topic`: The rest of your headings should start from level 2."
+msgstr ""
+
+#: ../../google/docguide/style.md:53
+msgid ""
+"`## See also`: Put miscellaneous links at the bottom for the user who "
+"wants to know more or didn't find what she needed."
+msgstr ""
+
+#: ../../google/docguide/style.md:56
+msgid "Character line limit"
+msgstr ""
+
+#: ../../google/docguide/style.md:58
+msgid ""
+"Obey projects' character line limit wherever possible. Long URLs and "
+"tables are the usual suspects when breaking the rule. (Headings also "
+"can't be wrapped, but we encourage keeping them short). Otherwise, wrap "
+"your text:"
+msgstr ""
+
+#: ../../google/docguide/style.md:70
+msgid ""
+"Often, inserting a newline before a long link preserves readability while"
+" minimizing the overflow:"
+msgstr ""
+
+#: ../../google/docguide/style.md:79
+msgid "Trailing whitespace"
+msgstr ""
+
+#: ../../google/docguide/style.md:81
+msgid "Don't use trailing whitespace, use a trailing backslash."
+msgstr ""
+
+#: ../../google/docguide/style.md:83
+msgid ""
+"The [CommonMark spec](http://spec.commonmark.org/0.20/#hard-line-breaks) "
+"decrees that two spaces at the end of a line should insert a `<br />` "
+"tag. However, many directories have a trailing whitespace presubmit check"
+" in place, and many IDEs will clean it up anyway."
+msgstr ""
+
+#: ../../google/docguide/style.md:88
+msgid ""
+"Best practice is to avoid the need for a `<br />` altogether. Markdown "
+"creates paragraph tags for you simply with newlines: get used to that."
+msgstr ""
+
+#: ../../google/docguide/style.md:91
+msgid "Headings"
+msgstr ""
+
+#: ../../google/docguide/style.md:93
+msgid "ATX-style headings"
+msgstr ""
+
+#: ../../google/docguide/style.md:99
+msgid ""
+"Headings with `=` or `-` underlines can be annoying to maintain and don't"
+" fit with the rest of the heading syntax. The user has to ask: Does `---`"
+" mean H1 or H2?"
+msgstr ""
+
+#: ../../google/docguide/style.md:108
+msgid "Add spacing to headings"
+msgstr ""
+
+#: ../../google/docguide/style.md:110
+msgid "Prefer spacing after `#` and newlines before and after:"
+msgstr ""
+
+#: ../../google/docguide/style.md:120
+msgid "Lack of spacing makes it a little harder to read in source:"
+msgstr ""
+
+#: ../../google/docguide/style.md:129
+msgid "Lists"
+msgstr ""
+
+#: ../../google/docguide/style.md:131
+msgid "Use lazy numbering for long lists"
+msgstr ""
+
+#: ../../google/docguide/style.md:133
+msgid ""
+"Markdown is smart enough to let the resulting HTML render your numbered "
+"lists correctly. For longer lists that may change, especially long nested"
+" lists, use \"lazy\" numbering:"
+msgstr ""
+
+#: ../../google/docguide/style.md:145
+msgid ""
+"However, if the list is small and you don't anticipate changing it, "
+"prefer fully numbered lists, because it's nicer to read in source:"
+msgstr ""
+
+#: ../../google/docguide/style.md:154
+msgid "Nested list spacing"
+msgstr ""
+
+#: ../../google/docguide/style.md:156
+msgid ""
+"When nesting lists, use a 4 space indent for both numbered and bulleted "
+"lists:"
+msgstr ""
+
+#: ../../google/docguide/style.md:171
+msgid "The following works, but it's very messy:"
+msgstr ""
+
+#: ../../google/docguide/style.md:179
+msgid ""
+"Even when there's no nesting, using the 4 space indent makes layout "
+"consistent for wrapped text:"
+msgstr ""
+
+#: ../../google/docguide/style.md:191
+msgid ""
+"However, when lists are small, not nested, and a single line, one space "
+"can suffice for both kinds of lists:"
+msgstr ""
+
+#: ../../google/docguide/style.md:203
+msgid "Code"
+msgstr ""
+
+#: ../../google/docguide/style.md:205
+msgid "Inline"
+msgstr ""
+
+#: ../../google/docguide/style.md:207
+msgid ""
+"&#96;Backticks&#96; designate `inline code`, and will render all wrapped "
+"content literally. Use them for short code quotations and field names:"
+msgstr ""
+
+#: ../../google/docguide/style.md:216
+msgid ""
+"Use inline code when referring to file types in an abstract sense, rather"
+" than a specific file:"
+msgstr ""
+
+#: ../../google/docguide/style.md:223
+msgid ""
+"Backticks are the most common approach for \"escaping\" Markdown "
+"metacharacters; in most situations where escaping would be needed, code "
+"font just makes sense anyway."
+msgstr ""
+
+#: ../../google/docguide/style.md:227
+msgid "Codeblocks"
+msgstr ""
+
+#: ../../google/docguide/style.md:229
+msgid "For code quotations longer than a single line, use a codeblock:"
+msgstr ""
+
+#: ../../google/docguide/style.md:238
+msgid "Declare the language"
+msgstr ""
+
+#: ../../google/docguide/style.md:240
+msgid ""
+"It is best practice to explicitly declare the language, so that neither "
+"the syntax highlighter nor the next editor must guess."
+msgstr ""
+
+#: ../../google/docguide/style.md:243
+msgid "Indented codeblocks are sometimes cleaner"
+msgstr ""
+
+#: ../../google/docguide/style.md:245
+msgid ""
+"Four-space indenting is also interpreted as a codeblock. These can look "
+"cleaner and be easier to read in source, but there is no way to specify "
+"the language. We encourage their use when writing many short snippets:"
+msgstr ""
+
+#: ../../google/docguide/style.md:263
+msgid "Escape newlines"
+msgstr ""
+
+#: ../../google/docguide/style.md:265
+msgid ""
+"Because most commandline snippets are intended to be copied and pasted "
+"directly into a terminal, it's best practice to escape any newlines. Use "
+"a single backslash at the end of the line:"
+msgstr ""
+
+#: ../../google/docguide/style.md:276
+msgid "Nest codeblocks within lists"
+msgstr ""
+
+#: ../../google/docguide/style.md:278
+msgid ""
+"If you need a codeblock within a list, make sure to indent it so as to "
+"not break the list:"
+msgstr ""
+
+#: ../../google/docguide/style.md:291
+msgid ""
+"You can also create a nested code block with 4 spaces. Simply indent 4 "
+"additional spaces from the list indentation:"
+msgstr ""
+
+#: ../../google/docguide/style.md:302
+msgid "Links"
+msgstr ""
+
+#: ../../google/docguide/style.md:304
+msgid ""
+"Long links make source Markdown difficult to read and break the 80 "
+"character wrapping. **Wherever possible, shorten your links**."
+msgstr ""
+
+#: ../../google/docguide/style.md:307
+msgid "Use informative Markdown link titles"
+msgstr ""
+
+#: ../../google/docguide/style.md:309
+msgid ""
+"Markdown link syntax allows you to set a link title, just as HTML does. "
+"Use it wisely."
+msgstr ""
+
+#: ../../google/docguide/style.md:312
+msgid ""
+"Titling your links as \"link\" or \"here\" tells the reader precisely "
+"nothing when quickly scanning your doc and is a waste of space:"
+msgstr ""
+
+#: ../../google/docguide/style.md:321
+msgid ""
+"Instead, write the sentence naturally, then go back and wrap the most "
+"appropriate phrase with the link:"
+msgstr ""
+
+#: ../../google/docguide/style.md:329
+msgid "Images"
+msgstr ""
+
+#: ../../google/docguide/style.md:331
+msgid ""
+"Use images sparingly, and prefer simple screenshots. This guide is "
+"designed around the idea that plain text gets users down to the business "
+"of communication faster with less reader distraction and author "
+"procrastination. However, it's sometimes very helpful to show what you "
+"mean."
+msgstr ""
+
+#: ../../google/docguide/style.md:336
+msgid ""
+"See [image "
+"syntax](https://gerrit.googlesource.com/gitiles/+/master/Documentation/markdown.md#Images)."
+msgstr ""
+
+#: ../../google/docguide/style.md:338
+msgid "Prefer lists to tables"
+msgstr ""
+
+#: ../../google/docguide/style.md:340
+msgid ""
+"Any tables in your Markdown should be small. Complex, large tables are "
+"difficult to read in source and most importantly, **a pain to modify "
+"later**."
+msgstr ""
+
+#: ../../google/docguide/style.md:352
+msgid ""
+"[Lists](#lists) and subheadings usually suffice to present the same "
+"information in a slightly less compact, though much more edit-friendly "
+"way:"
+msgstr ""
+
+#: ../../google/docguide/style.md:375
+msgid "However, there are times when a small table is called for:"
+msgstr ""
+
+#: ../../google/docguide/style.md:385
+msgid "Strongly prefer Markdown to HTML"
+msgstr ""
+
+#: ../../google/docguide/style.md:387
+msgid ""
+"Please prefer standard Markdown syntax wherever possible and avoid HTML "
+"hacks. If you can't seem to accomplish what you want, reconsider whether "
+"you really need it. Except for [big tables](#prefer-lists-to-tables), "
+"Markdown meets almost all needs already."
+msgstr ""
+
+#: ../../google/docguide/style.md:392
+msgid ""
+"Every bit of HTML or Javascript hacking reduces the readability and "
+"portability. This in turn limits the usefulness of integrations with "
+"other tools, which may either present the source as plain text or render "
+"it. See [Philosophy](philosophy.md)."
+msgstr ""
+
+#: ../../google/docguide/style.md:397
+msgid "Gitiles does not render HTML."
+msgstr ""
+

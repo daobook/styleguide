@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, xinetzone
+# This file is distributed under the same license as the Style Guide
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Style Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-19 13:53+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../google/docguide/index.md:1
+msgid "Google documentation guide"
+msgstr "谷歌文档指南"
+
+#: ../../google/docguide/index.md:3
+msgid "{guilabel}`来源`：{google}`styleguide/docguide/`"
+msgstr ""
+
+#: ../../google/docguide/index.md:16
+msgid "See also"
+msgstr "延伸阅读"
+
+#: ../../google/docguide/index.md:18
+msgid ""
+"[How to update this guide](https://goto.google.com/doc-guide), for "
+"Googlers."
+msgstr ""
+"[如何更新本指南](https://goto.google.com/doc-guide)，针对 Googlers。"

@@ -3,13 +3,6 @@
 "Say what you mean, simply and directly." - [Brian Kernighan]
 (https://en.wikipedia.org/wiki/The_Elements_of_Programming_Style)
 
-Contents:
-
-1.  [Minimum viable documentation](#minimum-viable-documentation)
-1.  [Update docs with code](#update-docs-with-code)
-1.  [Delete dead documentation](#delete-dead-documentation)
-1.  [Documentation is the story of your code](#documentation-is-the-story-of-your-code)
-
 ## Minimum viable documentation
 
 A small set of fresh and accurate docs are better than a sprawling, loose

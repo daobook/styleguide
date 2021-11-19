@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, xinetzone
+# This file is distributed under the same license as the Style Guide
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Style Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-19 13:53+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../google/docguide/READMEs.md:1
+msgid "README.md files"
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:3
+msgid "About README.md files."
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:5
+msgid "Overview"
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:7
+msgid ""
+"`README.md` files are Markdown files that describe a directory. GitHub "
+"and Gitiles renders it when you browse the directory."
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:10
+msgid ""
+"For example, the file /README.md is rendered when you view the contents "
+"of the containing directory:"
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:13
+msgid "https://github.com/google/styleguide/tree/gh-pages"
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:15
+msgid ""
+"Also `README.md` at `HEAD` ref is rendered by Gitiles when displaying "
+"repository index:"
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:18
+msgid "https://gerrit.googlesource.com/gitiles/"
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:20
+msgid "Guidelines"
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:22
+msgid ""
+"**`README.md` files are intended to provide orientation for engineers "
+"browsing your code, especially first-time users.** The `README.md` is "
+"likely the first file a reader encounters when they browse a directory "
+"that contains your code. In this way, it acts as a landing page for the "
+"directory."
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:27
+msgid ""
+"We recommend that top-level directories for your code have an up-to-date "
+"`README.md` file. This is especially important for package directories "
+"that provide interfaces for other teams."
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:31
+msgid "Filename"
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:33
+msgid "Use `README.md`."
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:35
+msgid "Files named `README` are not displayed in the directory view in Gitiles."
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:37
+msgid "Contents"
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:39
+msgid ""
+"At minimum, every package-level `README.md` should include or point to "
+"the following information:"
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:42
+msgid "**What** is in this package/library and what's it used for."
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:43
+msgid "**Who** to contact."
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:44
+msgid ""
+"**Status**: whether this package/library is deprecated, or not for "
+"general release, etc."
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:46
+msgid "**More info**: where to go for more detailed documentation, such as:"
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:47
+msgid "An overview.md file for more detailed conceptual information."
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:48
+msgid "Any API documentation for using this package/library."
+msgstr ""
+
+#: ../../google/docguide/READMEs.md:50
+msgid "Example"
+msgstr ""
+

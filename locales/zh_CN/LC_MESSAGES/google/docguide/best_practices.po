@@ -1,0 +1,227 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, xinetzone
+# This file is distributed under the same license as the Style Guide
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Style Guide \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-19 13:53+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../google/docguide/best_practices.md:1
+msgid "Documentation Best Practices"
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:3
+msgid ""
+"\"Say what you mean, simply and directly.\" - [Brian Kernighan] "
+"(https://en.wikipedia.org/wiki/The_Elements_of_Programming_Style)"
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:6
+msgid "Minimum viable documentation"
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:8
+msgid ""
+"A small set of fresh and accurate docs are better than a sprawling, loose"
+" assembly of \"documentation\" in various states of disrepair."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:11
+msgid ""
+"Write short and useful documents. Cut out everything unnecessary, while "
+"also making a habit of continually massaging and improving every doc to "
+"suit your changing needs. **Docs work best when they are alive but "
+"frequently trimmed, like a bonsai tree**."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:16
+msgid ""
+"This guide encourages engineers to take ownership of their docs and keep "
+"them up to date with the same zeal we keep our tests in good order. "
+"Strive for this."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:20
+msgid "Identify what you really need: release docs, API docs, testing guidelines."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:21
+msgid "Delete cruft frequently and in small batches."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:23
+msgid "Update docs with code"
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:25
+msgid ""
+"**Change your documentation in the same CL as the code change**. This "
+"keeps your docs fresh, and is also a good place to explain to your "
+"reviewer what you're doing."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:29
+msgid ""
+"A good reviewer can at least insist that docstrings, header files, "
+"README.md files, and any other docs get updated alongside the CL."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:32
+msgid "Delete dead documentation"
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:34
+msgid ""
+"Dead docs are bad. They misinform, they slow down, they incite despair in"
+" engineers and laziness in team leads. They set a precedent for leaving "
+"behind messes in a code base. If your home is clean, most guests will be "
+"clean without being asked."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:39
+msgid ""
+"Just like any big cleaning project, **it's easy to be overwhelmed**. If "
+"your docs are in bad shape:"
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:42
+msgid "Take it slow, doc health is a gradual accumulation."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:43
+msgid "First delete what you're certain is wrong, ignore what's unclear."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:44
+msgid ""
+"Get your whole team involved. Devote time to quickly scan every doc and "
+"make a simple decision: Keep or delete?"
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:46
+msgid ""
+"Default to delete or leave behind if migrating. Stragglers can always be "
+"recovered."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:48
+msgid "Iterate."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:50
+msgid "Prefer the good over the perfect"
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:52
+msgid ""
+"Your documentation should be as good as possible within a reasonable time"
+" frame. The standards for a documentation review are different from the "
+"standards for code reviews. Reviewers can and should ask for "
+"improvements, but in general, the author should always be able to invoke "
+"the \"Good Over Perfect Rule\". It's preferable to allow authors to "
+"quickly submit changes that improve the document, instead of forcing "
+"rounds of review until it's \"perfect\". Docs are never perfect, and tend"
+" to gradually improve as the team learns what they really need to write "
+"down."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:61
+msgid "Documentation is the story of your code"
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:63
+msgid ""
+"Writing excellent code doesn't end when your code compiles or even if "
+"your test coverage reaches 100%. It's easy to write something a computer "
+"understands, it's much harder to write something both a human and a "
+"computer understand. Your mission as a Code Health-conscious engineer is "
+"to **write for humans first, computers second.** Documentation is an "
+"important part of this skill."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:69
+msgid ""
+"There's a spectrum of engineering documentation that ranges from terse "
+"comments to detailed prose:"
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:72
+msgid ""
+"**Inline comments**: The primary purpose of inline comments is to provide"
+" information that the code itself cannot contain, such as why the code is"
+" there."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:76
+msgid "**Method and class comments**:"
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:78
+msgid ""
+"**Method API documentation**: The header / Javadoc / docstring comments "
+"that say what methods do and how to use them. This documentation is **the"
+" contract of how your code must behave**. The intended audience is future"
+" programmers who will use and modify your code."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:84
+msgid ""
+"It is often reasonable to say that any behavior documented here should "
+"have a test verifying it. This documentation details what arguments the "
+"method takes, what it returns, any \"gotchas\" or restrictions, and what "
+"exceptions it can throw or errors it can return. It does not usually "
+"explain why code behaves a particular way unless that's relevant to a "
+"developer's understanding of how to use the method. \"Why\" explanations "
+"are for inline comments. Think in practical terms when writing method "
+"documentation: \"This is a hammer. You use it to pound nails.\""
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:93
+msgid ""
+"**Class / Module API documentation**: The header / Javadoc / docstring "
+"comments for a class or a whole file. This documentation gives a brief "
+"overview of what the class / file does and often gives a few short "
+"examples of how you might use the class / file."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:98
+msgid ""
+"Examples are particularly relevant when there's several distinct ways to "
+"use the class (some advanced, some simple). Always list the simplest use "
+"case first."
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:102
+msgid ""
+"**README.md**: A good README.md orients the new user to the directory and"
+" points to more detailed explanation and user guides:"
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:104
+msgid "What is this directory intended to hold?"
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:105
+msgid "Which files should the developer look at first? Are some files an API?"
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:106
+msgid "Who maintains this directory and where I can learn more?"
+msgstr ""
+
+#: ../../google/docguide/best_practices.md:108
+msgid "See the [README.md guidelines](READMEs.md)."
+msgstr ""
+

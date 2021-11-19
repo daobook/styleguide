@@ -11,29 +11,6 @@ We seek to balance three goals:
 2. *Markdown files are maintainable over time and across teams.*
 3. *The syntax is simple and easy to remember.*
 
-Contents:
-
-1.  [Document layout](#document-layout)
-1.  [Character line limit](#character-line-limit)
-1.  [Trailing whitespace](#trailing-whitespace)
-1.  [Headings](#headings)
-    1.  [ATX-style headings](#atx-style-headings)
-    1.  [Add spacing to headings](#add-spacing-to-headings)
-1.  [Lists](#lists)
-    1.  [Use lazy numbering for long lists](#use-lazy-numbering-for-long-lists)
-    1.  [Nested list spacing](#nested-list-spacing)
-1.  [Code](#code)
-    1.  [Inline](#inline)
-    1.  [Codeblocks](#codeblocks)
-    1.  [Declare the language](#declare-the-language)
-    1.  [Escape newlines](#escape-newlines)
-    1.  [Nest codeblocks within lists](#nest-codeblocks-within-lists)
-1.  [Links](#links)
-    1.  [Use informative Markdown link titles](#use-informative-markdown-link-titles)
-1.  [Images](#images)
-1.  [Prefer lists to tables](#prefer-lists-to-tables)
-1.  [Strongly prefer Markdown to HTML](#strongly-prefer-markdown-to-html)
-
 ## Document layout
 
 In general, most documents benefit from some variation of the following layout:

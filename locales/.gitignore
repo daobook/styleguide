@@ -1,0 +1,7 @@
+*.mo
+cpp/
+html-css/
+javascript/
+typescript/
+shell/
+python/
