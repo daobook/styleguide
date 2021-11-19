@@ -6,6 +6,7 @@
    :caption: 导航
    
    google/index
+   about
 
 目录与索引
 ==================
