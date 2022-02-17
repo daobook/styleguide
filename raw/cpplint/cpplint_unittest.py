@@ -73,10 +73,7 @@ class ErrorCollector(object):
       self._errors.append('%s  [%s] [%d]' % (message, category, confidence))
 
   def Results(self):
-    if len(self._errors) < 2:
-      return ''.join(self._errors)  # Most tests expect to have a string.
-    else:
-      return self._errors  # Let's give a list if there is more than one.
+    return ''.join(self._errors) if len(self._errors) < 2 else self._errors
 
   def ResultList(self):
     return self._errors
@@ -97,7 +94,7 @@ class ErrorCollector(object):
   def RemoveIfPresent(self, substr):
     for (index, error) in enumerate(self._errors):
       if error.find(substr) != -1:
-        self._errors = self._errors[0:index] + self._errors[(index + 1):]
+        self._errors = self._errors[:index] + self._errors[(index + 1):]
         break
 
 
@@ -1713,17 +1710,21 @@ class CpplintTest(CpplintTestBase):
 
       error_collector = ErrorCollector(self.assert_)
       cpplint.ProcessFileData(
-          'foo.cc', 'cc',
-          ['// Copyright 2014 Your Company.',
-           'virtual void F(int a,',
-           '               int b) ' + virt_specifier + ';',
-           'virtual void F(int a,',
-           '               int b) LOCKS_EXCLUDED(lock) ' + virt_specifier + ';',
-           'virtual void F(int a,',
-           '               int b)',
-           '    LOCKS_EXCLUDED(lock) ' + virt_specifier + ';',
-           ''],
-          error_collector)
+          'foo.cc',
+          'cc',
+          [
+              '// Copyright 2014 Your Company.',
+              'virtual void F(int a,',
+              f'               int b) {virt_specifier};',
+              'virtual void F(int a,',
+              f'               int b) LOCKS_EXCLUDED(lock) {virt_specifier};',
+              'virtual void F(int a,',
+              '               int b)',
+              f'    LOCKS_EXCLUDED(lock) {virt_specifier};',
+              '',
+          ],
+          error_collector,
+      )
       self.assertEquals(
           [error_message, error_message, error_message],
           error_collector.Results())
@@ -1866,13 +1867,13 @@ class CpplintTest(CpplintTestBase):
     self.TestLint('typedef const string& A;', '')
 
     for decl in members_declarations:
-      self.TestLint(decl + ' = b;', '')
-      self.TestLint(decl + '      =', '')
+      self.TestLint(f'{decl} = b;', '')
+      self.TestLint(f'{decl}      =', '')
 
     # The Bad.
 
     for decl in members_declarations:
-      self.TestLint(decl + ';', errmsg)
+      self.TestLint(f'{decl};', errmsg)
 
   # Variable-length arrays are not permitted.
   def testVariableLengthArrayDetection(self):
@@ -3839,7 +3840,7 @@ class CpplintTest(CpplintTestBase):
 
       filt = '-,+whitespace,-whitespace/indent'
       self.assertEquals(['foo.h'],
-                        cpplint.ParseArguments(['--filter='+filt, 'foo.h']))
+                        cpplint.ParseArguments([f'--filter={filt}', 'foo.h']))
       self.assertEquals(['-', '+whitespace', '-whitespace/indent'],
                         cpplint._cpplint_state.filters)
 
@@ -3853,13 +3854,13 @@ class CpplintTest(CpplintTestBase):
       self.assertEqual(['foo.h'],
                        cpplint.ParseArguments(['--extensions=hpp,cpp,cpp', 'foo.h']))
       self.assertEqual(set(['hpp', 'cpp']), cpplint._valid_extensions)
-      
+
       self.assertEqual(set(['h']), cpplint._hpp_headers)  # Default value
       self.assertEqual(['foo.h'],
                        cpplint.ParseArguments(['--extensions=cpp,cpp', '--headers=hpp,h', 'foo.h']))
       self.assertEqual(set(['hpp', 'h']), cpplint._hpp_headers)
       self.assertEqual(set(['hpp', 'h', 'cpp']), cpplint._valid_extensions)
-      
+
     finally:
       cpplint._USAGE = old_usage
       cpplint._ERROR_CATEGORIES = old_error_categories
@@ -4440,7 +4441,7 @@ class CpplintTest(CpplintTestBase):
     # Make sure that the declaration is logged if there's an error.
     # Seed generator with an integer for absolute reproducibility.
     random.seed(25)
-    for unused_i in range(10):
+    for _ in range(10):
       # Build up random list of non-storage-class declaration specs.
       other_decl_specs = [random.choice(qualifiers), random.choice(signs),
                           random.choice(types)]
@@ -4453,9 +4454,8 @@ class CpplintTest(CpplintTestBase):
       # insert storage class after the first
       storage_class = random.choice(storage_classes)
       insertion_point = random.randint(1, len(other_decl_specs))
-      decl_specs = (other_decl_specs[0:insertion_point]
-                    + [storage_class]
-                    + other_decl_specs[insertion_point:])
+      decl_specs = (other_decl_specs[:insertion_point] +
+                    [storage_class]) + other_decl_specs[insertion_point:]
 
       self.TestLintLogCodeOnError(
           ' '.join(decl_specs) + ';',
@@ -4463,8 +4463,7 @@ class CpplintTest(CpplintTestBase):
 
       # but no error if storage class is first
       self.TestLintLogCodeOnError(
-          storage_class + ' ' + ' '.join(other_decl_specs),
-          '')
+          f'{storage_class} ' + ' '.join(other_decl_specs), '')
 
   def testLegalCopyright(self):
     legal_copyright_message = (
@@ -4485,9 +4484,11 @@ class CpplintTest(CpplintTestBase):
 
     error_collector = ErrorCollector(self.assert_)
     cpplint.ProcessFileData(
-        file_path, 'cc',
-        ['' for unused_i in range(10)] + [copyright_line],
-        error_collector)
+        file_path,
+        'cc',
+        ['' for _ in range(10)] + [copyright_line],
+        error_collector,
+    )
     self.assertEquals(
         1,
         error_collector.ResultList().count(legal_copyright_message))
@@ -4501,9 +4502,11 @@ class CpplintTest(CpplintTestBase):
 
     error_collector = ErrorCollector(self.assert_)
     cpplint.ProcessFileData(
-        file_path, 'cc',
-        ['' for unused_i in range(9)] + [copyright_line],
-        error_collector)
+        file_path,
+        'cc',
+        ['' for _ in range(9)] + [copyright_line],
+        error_collector,
+    )
     for message in error_collector.ResultList():
       if message.find('legal/copyright') != -1:
         self.fail('Unexpected error: %s' % message)
@@ -4521,15 +4524,15 @@ class CpplintTest(CpplintTestBase):
 class Cxx11Test(CpplintTestBase):
 
   def Helper(self, package, extension, lines, count):
-    filename = package + '/foo.' + extension
+    filename = f'{package}/foo.{extension}'
     lines = lines[:]
 
     # Header files need to have an ifdef guard wrapped around their code.
     if extension == 'h':
       guard = filename.upper().replace('/', '_').replace('.', '_') + '_'
-      lines.insert(0, '#ifndef ' + guard)
-      lines.insert(1, '#define ' + guard)
-      lines.append('#endif  // ' + guard)
+      lines.insert(0, f'#ifndef {guard}')
+      lines.insert(1, f'#define {guard}')
+      lines.append(f'#endif  // {guard}')
 
     # All files need a final blank line.
     lines.append('')
@@ -4976,12 +4979,12 @@ class CheckForFunctionLengthsTest(CpplintTestBase):
     """
     trigger_level = self.TriggerLines(cpplint._VerboseLevel())
     self.TestFunctionLengthsCheck(
-        'void test(int x)' + self.FunctionBody(lines),
-        ('Small and focused functions are preferred: '
-         'test() has %d non-comment lines '
-         '(error triggered by exceeding %d lines).'
-         '  [readability/fn_size] [%d]'
-         % (lines, trigger_level, error_level)))
+        f'void test(int x){self.FunctionBody(lines)}',
+        'Small and focused functions are preferred: '
+        'test() has %d non-comment lines '
+        '(error triggered by exceeding %d lines).'
+        '  [readability/fn_size] [%d]' % (lines, trigger_level, error_level),
+    )
 
   def TestFunctionLengthCheckDefinitionOK(self, lines):
     """Generate shorter function definition and check no warning is produced.
@@ -4989,9 +4992,8 @@ class CheckForFunctionLengthsTest(CpplintTestBase):
     Args:
       lines: Number of lines to generate.
     """
-    self.TestFunctionLengthsCheck(
-        'void test(int x)' + self.FunctionBody(lines),
-        '')
+    self.TestFunctionLengthsCheck(f'void test(int x){self.FunctionBody(lines)}',
+                                  '')
 
   def TestFunctionLengthCheckAtErrorLevel(self, error_level):
     """Generate and check function at the trigger level for --v setting.
@@ -5043,9 +5045,7 @@ class CheckForFunctionLengthsTest(CpplintTestBase):
         '')
 
   def testFunctionLengthCheckClassDefinition(self):
-    self.TestFunctionLengthsCheck(  # Not a function definition
-        'class Test' + self.FunctionBody(66) + ';',
-        '')
+    self.TestFunctionLengthsCheck(f'class Test{self.FunctionBody(66)};', '')
 
   def testFunctionLengthCheckTrivial(self):
     self.TestFunctionLengthsCheck(
@@ -5096,12 +5096,13 @@ class CheckForFunctionLengthsTest(CpplintTestBase):
     error_lines = self.TriggerLines(error_level) + 1
     trigger_level = self.TriggerLines(cpplint._VerboseLevel())
     self.TestFunctionLengthsCheck(
-        'void test_blanks(int x)' + self.FunctionBody(error_lines),
+        f'void test_blanks(int x){self.FunctionBody(error_lines)}',
         ('Small and focused functions are preferred: '
          'test_blanks() has %d non-comment lines '
          '(error triggered by exceeding %d lines).'
-         '  [readability/fn_size] [%d]')
-        % (error_lines, trigger_level, error_level))
+         '  [readability/fn_size] [%d]') % (error_lines, trigger_level,
+                                            error_level),
+    )
 
   def testFunctionLengthCheckComplexDefinitionSeverity1(self):
     error_level = 1
@@ -5123,12 +5124,13 @@ class CheckForFunctionLengthsTest(CpplintTestBase):
     error_lines = self.TestLines(error_level) + 1
     trigger_level = self.TestLines(cpplint._VerboseLevel())
     self.TestFunctionLengthsCheck(
-        'TEST_F(Test, Mutator)' + self.FunctionBody(error_lines),
+        f'TEST_F(Test, Mutator){self.FunctionBody(error_lines)}',
         ('Small and focused functions are preferred: '
          'TEST_F(Test, Mutator) has %d non-comment lines '
          '(error triggered by exceeding %d lines).'
-         '  [readability/fn_size] [%d]')
-        % (error_lines, trigger_level, error_level))
+         '  [readability/fn_size] [%d]') % (error_lines, trigger_level,
+                                            error_level),
+    )
 
   def testFunctionLengthCheckDefinitionSeverity1ForSplitLineTest(self):
     error_level = 1
@@ -5163,18 +5165,20 @@ class CheckForFunctionLengthsTest(CpplintTestBase):
     error_lines = self.TriggerLines(error_level)+1
     trigger_level = self.TriggerLines(cpplint._VerboseLevel())
     self.TestFunctionLengthsCheck(
-        'void test(int x)' + self.FunctionBodyWithNoLints(error_lines),
+        f'void test(int x){self.FunctionBodyWithNoLints(error_lines)}',
         ('Small and focused functions are preferred: '
          'test() has %d non-comment lines '
          '(error triggered by exceeding %d lines).'
-         '  [readability/fn_size] [%d]')
-        % (error_lines, trigger_level, error_level))
+         '  [readability/fn_size] [%d]') % (error_lines, trigger_level,
+                                            error_level),
+    )
 
   def testFunctionLengthCheckDefinitionSeverity1WithNoLint(self):
     self.TestFunctionLengthsCheck(
-        ('void test(int x)' + self.FunctionBody(self.TriggerLines(1))
-         + '  // NOLINT -- long function'),
-        '')
+        (f'void test(int x){self.FunctionBody(self.TriggerLines(1))}' +
+         '  // NOLINT -- long function'),
+        '',
+    )
 
   def testFunctionLengthCheckDefinitionBelowSeverity2(self):
     self.TestFunctionLengthCheckBelowErrorLevel(2)
